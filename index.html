@@ -155,8 +155,8 @@
         </sc-for>
       </div>
       <div style="display:flex;gap:12px;">
-        <div style="background:#fff;color:#12193a;font-weight:700;font-size:22px;padding:15px 26px;border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,0.2);">지금 신청하기 →</div>
-        <div style="background:transparent;color:#fff;font-weight:700;font-size:22px;padding:15px 26px;border-radius:10px;border:1px solid rgba(255,255,255,0.35);">커리큘럼 보기</div>
+        <a href="#pricing" style="text-decoration:none;background:#fff;color:#12193a;font-weight:700;font-size:22px;padding:15px 26px;border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,0.2);">지금 신청하기 →</a>
+        <a href="#curriculum" style="text-decoration:none;background:transparent;color:#fff;font-weight:700;font-size:22px;padding:15px 26px;border-radius:10px;border:1px solid rgba(255,255,255,0.35);">커리큘럼 보기</a>
       </div>
     </div>
 
@@ -492,7 +492,7 @@
   </section>
 
   <!-- ============ CASE STUDIES ============ -->
-  <section data-screen-label="Case Studies" style="padding:64px 40px;background:#eef2fb;">
+  <section id="case-study" data-screen-label="Case Studies" style="padding:64px 40px;background:#eef2fb;scroll-margin-top:72px;">
     <div style="text-align:center;margin-bottom:32px;">
       <div style="font-size:17px;font-weight:700;color:#2f6feb;margin-bottom:8px;">CASE STUDY</div>
       <h2 style="font-size:35px;font-weight:800;margin:0;color:#14162b;">수강생이 직접 만든 AI 홈페이지</h2>
@@ -625,6 +625,7 @@ class Component extends DCLogic {
       { label: "과정소개", href: "#intro" },
       { label: "커리큘럼", href: "#curriculum" },
       { label: "결과물", href: "#results" },
+      { label: "제작 사례", href: "#case-study" },
       { label: "수강료", href: "#pricing" },
       { label: "FAQ", href: "#faq" },
     ];
