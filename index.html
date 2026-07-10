@@ -47,6 +47,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
+  html{scroll-behavior:smooth;}
   body{margin:0;background:#f5f7fb;font-family:'Noto Sans KR',system-ui,sans-serif;}
   a{color:#2f6feb;text-decoration:none;}
   a:hover{color:#1d4fd8;}
@@ -69,15 +70,16 @@
     [data-mq="wf-row"]{flex-wrap:wrap!important;justify-content:center!important;row-gap:16px!important;}
 
     [data-screen-label="Personas"], [data-screen-label="Six Steps"],
-    [data-screen-label="SEO GEO"], [data-screen-label="Curriculum"],
+    [data-screen-label="SEO GEO"], [data-screen-label="Instructor"], [data-screen-label="Curriculum"],
     [data-screen-label="After Class"], [data-screen-label="Case Studies"],
     [data-screen-label="FAQ"]{padding-left:20px!important;padding-right:20px!important;}
     [data-screen-label="Pricing"]{padding:40px 20px!important;}
     [data-screen-label="Footer CTA"]{padding:32px 20px!important;}
 
     [data-screen-label="Personas"] h2, [data-screen-label="Six Steps"] h2,
-    [data-screen-label="Curriculum"] h2, [data-screen-label="After Class"] h2,
+    [data-screen-label="Instructor"] h2, [data-screen-label="Curriculum"] h2, [data-screen-label="After Class"] h2,
     [data-screen-label="Case Studies"] h2, [data-screen-label="FAQ"] h2{font-size:26px!important;}
+    [data-screen-label="Instructor"] h3{font-size:19px!important;}
     [data-screen-label="SEO GEO"] h2{font-size:25px!important;}
 
     [data-mq="seo-col"]{min-width:0!important;flex-basis:100%!important;}
@@ -97,16 +99,16 @@
 
   <!-- ============ HEADER ============ -->
   <header data-screen-label="Header" style="position:fixed;top:0;left:0;right:0;z-index:50;background:#fff;border-bottom:1px solid #ececf2;min-height:64px;">
-    <div style="max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 40px;gap:24px;flex-wrap:wrap;">
-      <a href="#" style="display:flex;align-items:center;gap:8px;color:#14162b;font-weight:800;font-size:22px;letter-spacing:-0.2px;white-space:nowrap;text-decoration:none;cursor:pointer;">
+    <div style="max-width:1340px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 40px;gap:24px;flex-wrap:wrap;">
+      <a href="#" style="display:flex;align-items:center;gap:8px;color:#14162b;font-weight:800;font-size:24px;letter-spacing:-0.2px;white-space:nowrap;text-decoration:none;cursor:pointer;">
         <img src="assets/logo.png" alt="로고" style="height:28px;width:auto;display:block;">
         AI마케팅스쿨
       </a>
       <nav data-mq="desktop-nav" style="display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
         <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="5">
-          <a href="#" style="color:#3b4258;font-size:18px;font-weight:500;white-space:nowrap;">{{ link }}</a>
+          <a href="{{ link.href }}" style="color:#3b4258;font-size:20px;font-weight:500;white-space:nowrap;">{{ link.label }}</a>
         </sc-for>
-        <div style="background:#2f6feb;color:#fff;font-size:18px;font-weight:700;padding:9px 18px;border-radius:8px;white-space:nowrap;">신청하기</div>
+        <div style="background:#2f6feb;color:#fff;font-size:20px;font-weight:700;padding:9px 18px;border-radius:8px;white-space:nowrap;">신청하기</div>
       </nav>
       <div data-mq="hamburger" onclick="{{ toggleMenu }}" style="display:none;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px;cursor:pointer;">
         <div style="width:24px;height:2px;background:#14162b;border-radius:2px;"></div>
@@ -117,42 +119,43 @@
     <sc-if value="{{ mobileMenuOpen }}" hint-placeholder-val="{{ false }}">
       <div data-mq="mobile-menu" style="display:flex;flex-direction:column;background:#fff;border-top:1px solid #ececf2;padding:12px 20px 20px;gap:4px;">
         <sc-for list="{{ navLinks }}" as="link" hint-placeholder-count="5">
-          <a href="#" style="color:#3b4258;font-size:16px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;">{{ link }}</a>
+          <a href="{{ link.href }}" onclick="{{ closeMenu }}" style="color:#3b4258;font-size:18px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;">{{ link.label }}</a>
         </sc-for>
-        <div style="background:#2f6feb;color:#fff;font-size:16px;font-weight:700;padding:12px 18px;border-radius:8px;text-align:center;margin-top:10px;">신청하기</div>
+        <div style="background:#2f6feb;color:#fff;font-size:18px;font-weight:700;padding:12px 18px;border-radius:8px;text-align:center;margin-top:10px;">신청하기</div>
       </div>
     </sc-if>
   </header>
   <div style="height:72px;" data-mq="header-spacer"></div>
 
   <!-- ============ HERO ============ -->
-  <section data-screen-label="Hero" style="padding:76px 40px 64px;background:#12193a;display:flex;gap:56px;align-items:flex-start;justify-content:center;flex-wrap:wrap;">
-    <div style="max-width:520px;min-width:420px;" data-mq="hero-col">
-      <h1 style="font-size:46px;line-height:1.32;font-weight:800;margin:0 0 20px;letter-spacing:-0.5px;color:#fff;">
+  <section id="intro" data-screen-label="Hero" style="padding:76px 40px 64px;background:#12193a;scroll-margin-top:72px;">
+    <div style="max-width:1340px;margin:0 auto;display:flex;gap:90px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;">
+    <div style="max-width:620px;min-width:420px;" data-mq="hero-col">
+      <h1 style="font-size:50px;line-height:1.32;font-weight:800;margin:0 0 20px;letter-spacing:-0.5px;color:#fff;word-break:keep-all;">
         2주 만에 완성하는<br>
-        <span style="color:#7ea6ff;">AI 홈페이지 제작</span> 실전과정
+        <span style="white-space:nowrap;"><span style="color:#7ea6ff;">AI 홈페이지 제작</span> 실전과정</span>
       </h1>
-      <p style="font-size:20px;line-height:1.7;color:#aab3d1;margin:0 0 22px;">
+      <p style="font-size:22px;line-height:1.7;color:#aab3d1;margin:0 0 22px;white-space:nowrap;">
         ChatGPT 기획부터 Claude 제작, GitHub 저장, Vercel 배포,<br>schemaWorks SEO·GEO 진단까지
       </p>
       <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px;">
-        <div style="display:flex;gap:8px;align-items:center;font-size:19px;color:#e4e8f5;font-weight:600;">
-          <span style="color:#7ea6ff;">✔</span> 코딩을 몰라도 직접 만드는 홈페이지
+        <div style="display:flex;gap:8px;align-items:center;font-size:21px;color:#e4e8f5;font-weight:600;">
+          <span style="color:#7ea6ff;">✔</span> 코딩을 몰라도 컴맹도 직접 만드는 홈페이지
         </div>
-        <div style="display:flex;gap:8px;align-items:center;font-size:19px;color:#e4e8f5;font-weight:600;">
+        <div style="display:flex;gap:8px;align-items:center;font-size:21px;color:#e4e8f5;font-weight:600;">
           <span style="color:#7ea6ff;">✔</span> 검색엔진과 생성형 AI가 이해하기 쉬운 구조까지 완성
         </div>
       </div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;">
         <sc-for list="{{ heroChips }}" as="chip" hint-placeholder-count="4">
-          <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:9px;padding:9px 13px;font-size:16px;font-weight:600;color:#dfe3f5;white-space:nowrap;flex-shrink:0;">
+          <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:9px;padding:9px 13px;font-size:18px;font-weight:600;color:#dfe3f5;white-space:nowrap;flex-shrink:0;">
             <span>{{ chip.icon }}</span>{{ chip.label }}
           </div>
         </sc-for>
       </div>
       <div style="display:flex;gap:12px;">
-        <div style="background:#fff;color:#12193a;font-weight:700;font-size:20px;padding:15px 26px;border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,0.2);">지금 신청하기 →</div>
-        <div style="background:transparent;color:#fff;font-weight:700;font-size:20px;padding:15px 26px;border-radius:10px;border:1px solid rgba(255,255,255,0.35);">커리큘럼 보기</div>
+        <div style="background:#fff;color:#12193a;font-weight:700;font-size:22px;padding:15px 26px;border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,0.2);">지금 신청하기 →</div>
+        <div style="background:transparent;color:#fff;font-weight:700;font-size:22px;padding:15px 26px;border-radius:10px;border:1px solid rgba(255,255,255,0.35);">커리큘럼 보기</div>
       </div>
     </div>
 
@@ -163,43 +166,43 @@
             <div style="width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid #e6e9f2;display:flex;align-items:center;justify-content:center;padding:10px;box-sizing:border-box;">
               <img src="assets/chatgpt.png" alt="ChatGPT" style="width:100%;height:100%;object-fit:contain;">
             </div>
-            <div style="font-size:15px;color:#c7cee5;font-weight:600;">기획</div>
+            <div style="font-size:17px;color:#c7cee5;font-weight:600;">기획</div>
           </div>
-          <div style="color:#c3c9dc;font-size:20px;padding:0 6px 18px;">→</div>
+          <div style="color:#c3c9dc;font-size:22px;padding:0 6px 18px;">→</div>
         </div>
         <div style="display:flex;align-items:center;">
           <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
             <div style="width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid #e6e9f2;display:flex;align-items:center;justify-content:center;padding:8px;box-sizing:border-box;">
               <img src="assets/claude.png" alt="Claude" style="width:100%;height:100%;object-fit:contain;">
             </div>
-            <div style="font-size:15px;color:#c7cee5;font-weight:600;">제작</div>
+            <div style="font-size:17px;color:#c7cee5;font-weight:600;">제작</div>
           </div>
-          <div style="color:#c3c9dc;font-size:20px;padding:0 6px 18px;">→</div>
+          <div style="color:#c3c9dc;font-size:22px;padding:0 6px 18px;">→</div>
         </div>
         <div style="display:flex;align-items:center;">
           <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
             <div style="width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid #e6e9f2;display:flex;align-items:center;justify-content:center;padding:9px;box-sizing:border-box;">
               <img src="assets/github.png" alt="GitHub" style="width:100%;height:100%;object-fit:contain;">
             </div>
-            <div style="font-size:15px;color:#c7cee5;font-weight:600;">저장</div>
+            <div style="font-size:17px;color:#c7cee5;font-weight:600;">저장</div>
           </div>
-          <div style="color:#c3c9dc;font-size:20px;padding:0 6px 18px;">→</div>
+          <div style="color:#c3c9dc;font-size:22px;padding:0 6px 18px;">→</div>
         </div>
         <div style="display:flex;align-items:center;">
           <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
             <div style="width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid #e6e9f2;display:flex;align-items:center;justify-content:center;padding:13px;box-sizing:border-box;">
               <img src="assets/vercel.png" alt="Vercel" style="width:100%;height:100%;object-fit:contain;">
             </div>
-            <div style="font-size:15px;color:#c7cee5;font-weight:600;">배포</div>
+            <div style="font-size:17px;color:#c7cee5;font-weight:600;">배포</div>
           </div>
-          <div style="color:#c3c9dc;font-size:20px;padding:0 6px 18px;">→</div>
+          <div style="color:#c3c9dc;font-size:22px;padding:0 6px 18px;">→</div>
         </div>
         <div style="display:flex;align-items:center;">
           <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
             <div style="width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid #e6e9f2;display:flex;align-items:center;justify-content:center;padding:6px;box-sizing:border-box;">
               <img src="assets/search.png" alt="schemaWorks" style="width:100%;height:100%;object-fit:contain;">
             </div>
-            <div style="font-size:15px;color:#c7cee5;font-weight:600;">SEO·GEO</div>
+            <div style="font-size:17px;color:#c7cee5;font-weight:600;">SEO·GEO</div>
           </div>
         </div>
       </div>
@@ -216,8 +219,8 @@
       <div style="display:flex;align-items:center;gap:14px;max-width:230px;">
         <div style="width:44px;height:44px;flex:none;border-radius:10px;background:{{ f.bg }};display:flex;align-items:center;justify-content:center;">{{ f.icon }}</div>
         <div>
-          <div style="font-weight:700;font-size:19px;color:#1a1f36;">{{ f.title }}</div>
-          <div style="font-size:16px;color:#828aa0;line-height:1.5;">{{ f.desc }}</div>
+          <div style="font-weight:700;font-size:21px;color:#1a1f36;">{{ f.title }}</div>
+          <div style="font-size:18px;color:#828aa0;line-height:1.5;">{{ f.desc }}</div>
         </div>
       </div>
     </sc-for>
@@ -226,55 +229,58 @@
   <!-- ============ PERSONAS ============ -->
   <section data-screen-label="Personas" style="padding:64px 40px;background:#ffffff;">
     <div style="text-align:center;margin-bottom:36px;">
-      <div style="font-size:15px;font-weight:700;color:#2f6feb;letter-spacing:0.5px;margin-bottom:8px;">WHO IT'S FOR</div>
-      <h2 style="font-size:32px;font-weight:800;margin:0;color:#14162b;">이런 분에게 딱 맞습니다</h2>
+      <div style="font-size:17px;font-weight:700;color:#2f6feb;letter-spacing:0.5px;margin-bottom:8px;">WHO IT'S FOR</div>
+      <h2 style="font-size:35px;font-weight:800;margin:0;color:#14162b;">이런 분에게 딱 맞습니다</h2>
     </div>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;max-width:1240px;margin:0 auto;">
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;max-width:1340px;margin:0 auto;">
       <sc-for list="{{ personas }}" as="p" hint-placeholder-count="6">
-        <div style="width:170px;background:#fff;border:1px solid #e6e9f2;border-radius:14px;padding:26px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;">
+        <div style="width:195px;background:#fff;border:1px solid #e6e9f2;border-radius:14px;padding:26px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;">
           <div style="width:52px;height:52px;border-radius:12px;background:#eaf1fe;display:flex;align-items:center;justify-content:center;">{{ p.icon }}</div>
-          <div style="font-size:18px;font-weight:700;color:#232945;line-height:1.5;">{{ p.title }}</div>
+          <div style="font-size:20px;font-weight:700;color:#232945;line-height:1.5;">{{ p.title }}</div>
         </div>
       </sc-for>
     </div>
   </section>
 
   <!-- ============ 5 STEPS ============ -->
-  <section data-screen-label="Six Steps" style="padding:64px 40px 72px;background:#eef2fb;">
+  <section data-screen-label="Six Steps" style="padding:64px 40px 72px;background:#12193a;">
     <div style="text-align:center;margin-bottom:6px;">
-      <div style="font-size:15px;font-weight:700;color:#2f6feb;letter-spacing:0.5px;margin-bottom:8px;">PROCESS</div>
-      <h2 style="font-size:32px;font-weight:800;margin:0 0 8px;color:#14162b;">AI 홈페이지 제작 5단계</h2>
-      <div style="font-size:18px;color:#8890a4;font-weight:600;">기획 → 제작 → 저장 → 배포 → SEO·GEO 진단</div>
+      <div style="font-size:17px;font-weight:700;color:#7ea6ff;letter-spacing:0.5px;margin-bottom:8px;">PROCESS</div>
+      <h2 style="font-size:35px;font-weight:800;margin:0 0 8px;color:#fff;">AI 홈페이지 제작 5단계</h2>
+      <div style="font-size:20px;color:#aab3d1;font-weight:600;">기획 → 제작 → 저장 → 배포 → SEO·GEO 진단</div>
     </div>
-    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;max-width:1280px;margin:28px auto 18px;">
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:1300px;margin:28px auto 18px;">
       <sc-for list="{{ steps }}" as="s" hint-placeholder-count="5">
-        <div style="width:186px;background:#fff;border:1px solid #e6e9f2;border-radius:14px;padding:18px 16px;">
+        <div style="width:226px;box-sizing:border-box;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:18px 16px;">
+          <div style="width:176px;height:176px;border-radius:24px;background:#fff;border:1px solid rgba(255,255,255,0.14);display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;margin:0 auto 14px;">
+            <img src="{{ s.logo }}" alt="{{ s.title }}" style="width:100%;height:100%;object-fit:contain;">
+          </div>
           <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-            <div style="width:26px;height:26px;border-radius:50%;background:{{ s.color }};color:#fff;font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:center;">{{ s.num }}</div>
-            <div style="font-weight:700;font-size:17px;color:#1a1f36;line-height:1.3;">{{ s.title }}</div>
+            <div style="width:26px;height:26px;flex:none;border-radius:50%;background:{{ s.color }};color:#fff;font-weight:800;font-size:19px;display:flex;align-items:center;justify-content:center;">{{ s.num }}</div>
+            <div style="font-weight:700;font-size:19px;color:#fff;line-height:1.3;">{{ s.title }}</div>
           </div>
           <sc-for list="{{ s.bullets }}" as="b" hint-placeholder-count="5">
-            <div style="font-size:16px;color:#6b7280;margin-bottom:4px;">✔ {{ b }}</div>
+            <div style="font-size:18px;color:#c7cee5;margin-bottom:4px;white-space:nowrap;">✔ {{ b }}</div>
           </sc-for>
         </div>
       </sc-for>
     </div>
-    <div style="text-align:center;font-size:19px;font-weight:700;color:#2f6feb;">배우고 끝나는 수업이 아니라 실제 홈페이지가 남습니다.</div>
+    <div style="text-align:center;font-size:21px;font-weight:700;color:#7ea6ff;">배우고 끝나는 수업이 아니라 실제 홈페이지가 남습니다.</div>
   </section>
 
   <!-- ============ SEO/GEO DIFF ============ -->
   <section data-screen-label="SEO GEO" style="padding:64px 40px;background:#ffffff;">
-    <div style="max-width:1240px;margin:0 auto;display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start;">
+    <div style="max-width:1340px;margin:0 auto;display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start;">
       <div style="flex:1 1 280px;min-width:260px;" data-mq="seo-col">
-        <div style="font-size:15px;font-weight:700;color:#2f6feb;letter-spacing:0.5px;margin-bottom:8px;">WHY SEO·GEO</div>
-        <h2 style="font-size:30px;font-weight:800;line-height:1.35;margin:0 0 16px;color:#14162b;">왜 이 과정은<br>SEO·GEO까지 다룰까요?</h2>
-        <p style="font-size:18px;line-height:1.75;color:#6b7280;margin:0 0 18px;">홈페이지를 만드는 것으로 끝이 아닙니다.<br>검색엔진과 생성형 AI가 잘 이해하고<br>추천할 수 있는 구조까지 완성합니다.</p>
+        <div style="font-size:17px;font-weight:700;color:#2f6feb;letter-spacing:0.5px;margin-bottom:8px;">WHY SEO·GEO</div>
+        <h2 style="font-size:33px;font-weight:800;line-height:1.35;margin:0 0 16px;color:#14162b;">왜 이 과정은<br>SEO·GEO까지 다룰까요?</h2>
+        <p style="font-size:20px;line-height:1.75;color:#6b7280;margin:0 0 18px;">홈페이지를 만드는 것으로 끝이 아닙니다.<br>검색엔진과 생성형 AI가 잘 이해하고<br>추천할 수 있는 구조까지 완성합니다.</p>
         <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px;">
           <sc-for list="{{ seoChecks }}" as="c" hint-placeholder-count="3">
-            <div style="display:flex;gap:8px;font-size:18px;color:#232945;font-weight:600;"><span style="color:#2f6feb;">✔</span>{{ c }}</div>
+            <div style="display:flex;gap:8px;font-size:20px;color:#232945;font-weight:600;"><span style="color:#2f6feb;">✔</span>{{ c }}</div>
           </sc-for>
         </div>
-        <div style="display:inline-flex;align-items:center;gap:8px;background:#eaf1fe;color:#2f6feb;font-weight:700;font-size:17px;padding:9px 16px;border-radius:9px;">검색엔진 + 생성형 AI 대응</div>
+        <div style="display:inline-flex;align-items:center;gap:8px;background:#eaf1fe;color:#2f6feb;font-weight:700;font-size:19px;padding:9px 16px;border-radius:9px;">검색엔진 + 생성형 AI 대응</div>
       </div>
 
       <div style="flex:1 1 300px;min-width:280px;background:#fff;border:1px solid #e6e9f2;border-radius:14px;box-shadow:0 10px 26px rgba(20,22,50,0.08);overflow:hidden;" data-mq="seo-col">
@@ -284,23 +290,23 @@
           <div style="width:6px;height:6px;border-radius:50%;background:#59c26b;"></div>
         </div>
         <div style="padding:18px 20px;">
-          <div style="font-size:18px;font-weight:700;color:#1a1f36;margin-bottom:14px;">schemaWorks 진단 결과</div>
+          <div style="font-size:20px;font-weight:700;color:#1a1f36;margin-bottom:14px;">schemaWorks 진단 결과</div>
           <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
             <div style="width:76px;height:76px;border-radius:50%;background:conic-gradient(#16a34a 0 82%, #e8c14c 82% 92%, #e2665a 92% 100%);display:flex;align-items:center;justify-content:center;flex:none;">
               <div style="width:54px;height:54px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-                <div style="font-size:19px;font-weight:800;color:#1a1f36;">92</div>
-                <div style="font-size:12px;color:#9aa1b5;">/100</div>
+                <div style="font-size:21px;font-weight:800;color:#1a1f36;">92</div>
+                <div style="font-size:14px;color:#9aa1b5;">/100</div>
               </div>
             </div>
-            <div style="font-size:15px;color:#5b6478;display:flex;flex-direction:column;gap:3px;">
+            <div style="font-size:17px;color:#5b6478;display:flex;flex-direction:column;gap:3px;">
               <div><span style="color:#16a34a;font-weight:700;">●</span> 성공 82</div>
               <div><span style="color:#e8ab2e;font-weight:700;">●</span> 경고 10</div>
               <div><span style="color:#e2665a;font-weight:700;">●</span> 오류 3</div>
             </div>
           </div>
-          <div style="font-size:16px;font-weight:700;color:#1a1f36;margin-bottom:6px;">주요 진단 항목</div>
+          <div style="font-size:18px;font-weight:700;color:#1a1f36;margin-bottom:6px;">주요 진단 항목</div>
           <sc-for list="{{ diagnosisItems }}" as="d" hint-placeholder-count="6">
-            <div style="display:flex;justify-content:space-between;font-size:15px;color:#5b6478;padding:4px 0;border-bottom:1px solid #f1f3f8;">
+            <div style="display:flex;justify-content:space-between;font-size:17px;color:#5b6478;padding:4px 0;border-bottom:1px solid #f1f3f8;">
               <span>{{ d }}</span><span style="color:#16a34a;font-weight:700;">성공</span>
             </div>
           </sc-for>
@@ -309,53 +315,107 @@
 
       <div style="flex:1 1 260px;min-width:240px;display:flex;flex-direction:column;gap:14px;" data-mq="seo-col">
         <div style="background:#f8f9fc;border:1px solid #e6e9f2;border-radius:14px;padding:18px;">
-          <div style="font-size:17px;font-weight:700;color:#1a1f36;text-align:center;margin-bottom:14px;">schemaWorks 진단 항목 예시</div>
+          <div style="font-size:19px;font-weight:700;color:#1a1f36;text-align:center;margin-bottom:14px;">schemaWorks 진단 항목 예시</div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
             <sc-for list="{{ diagnosisTags }}" as="t" hint-placeholder-count="7">
-              <div style="background:#fff;border:1px solid #e6e9f2;border-radius:8px;padding:8px 12px;font-size:16px;font-weight:600;color:#33395a;">{{ t }}</div>
+              <div style="background:#fff;border:1px solid #e6e9f2;border-radius:8px;padding:8px 12px;font-size:18px;font-weight:600;color:#33395a;">{{ t }}</div>
             </sc-for>
           </div>
         </div>
         <div style="background:#eaf1fe;border-radius:12px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;">
           <span style="color:#2f6feb;font-weight:800;">ⓘ</span>
-          <div style="font-size:16px;line-height:1.6;color:#2f4a8c;">문제점을 정확히 파악하고 수정 가이드를 제공하여 검색 노출과 AI 노출을 동시에 높입니다.</div>
+          <div style="font-size:18px;line-height:1.6;color:#2f4a8c;">문제점을 정확히 파악하고 수정 가이드를 제공하여 검색 노출과 AI 노출을 동시에 높입니다.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSTRUCTOR ============ -->
+  <section id="instructor" data-screen-label="Instructor" style="padding:64px 40px;background:#12193a;scroll-margin-top:72px;">
+    <div style="max-width:1340px;margin:0 auto;">
+      <div style="display:inline-block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);color:#fff;font-size:16px;font-weight:700;padding:7px 16px;border-radius:20px;margin-bottom:18px;">강사 소개</div>
+      <h2 style="font-size:35px;font-weight:800;margin:0 0 10px;color:#fff;">누가 가르치나요?</h2>
+      <p style="font-size:20px;color:#aab3d1;margin:0 0 36px;">10년 이상 현장에서 검증된 실전형 AI 마케팅 전문가가 직접 진행합니다.</p>
+
+      <div style="display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start;">
+        <div style="flex:0 0 auto;width:280px;display:flex;flex-direction:column;gap:16px;" data-mq="wide-card">
+          <div style="width:280px;border-radius:14px;overflow:hidden;" data-mq="wide-card">
+            <img src="assets/instructor-photo.jpg" alt="임헌수 대표" style="width:100%;height:auto;display:block;">
+          </div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:16px;text-align:center;">
+            <div style="color:#fff;font-weight:800;font-size:20px;margin-bottom:4px;">거상스쿨 대표 강사</div>
+            <div style="color:#aab3d1;font-size:16px;">거상스쿨 / 거상마케팅센터 운영</div>
+          </div>
+          <div style="background:#eaf1fe;border-radius:12px;padding:16px 18px;font-size:17px;line-height:1.7;color:#20345c;">
+            AI는 도구가 아니라 <strong>비즈니스 시스템</strong>입니다. 콘텐츠를 만들고, 리드를 모으고, 판매까지 연결되는 <strong>AI 기반 수익 구조</strong>를 함께 설계하고 실행합니다.
+          </div>
+        </div>
+
+        <div style="flex:1 1 460px;min-width:320px;" data-mq="wide-card">
+          <h3 style="font-size:24px;font-weight:800;line-height:1.4;margin:0 0 12px;color:#fff;">
+            <span style="color:#7ea6ff;">AI로 돈 버는 구조</span>를 설계하고 실행하는 실전형 마케팅 전문가
+          </h3>
+          <p style="font-size:18px;color:#c7cee5;margin:0 0 20px;">마케팅 분야 베스트셀러 7권 저자 · 큐레이션 2권 감수 · 13년간 현장 교육 경력</p>
+
+          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:28px;">
+            <div style="flex:1 1 220px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:16px 18px;">
+              <div style="color:#7ea6ff;font-size:15px;font-weight:700;margin-bottom:8px;">전문 분야</div>
+              <div style="color:#fff;font-size:17px;font-weight:600;line-height:1.6;">AI 마케팅 · 콘텐츠 수익화 · 랜딩페이지 · GEO · AEO</div>
+            </div>
+            <div style="flex:1 1 220px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:16px 18px;">
+              <div style="color:#7ea6ff;font-size:15px;font-weight:700;margin-bottom:8px;">강의 방식</div>
+              <div style="color:#fff;font-size:17px;font-weight:600;line-height:1.6;">실습 중심 · 결과물 중심 · 사업 적용 중심</div>
+            </div>
+          </div>
+
+          <div style="color:#c7cee5;font-size:16px;font-weight:600;margin-bottom:10px;">13년간 집필한 책과 감수한 책</div>
+          <div style="background:#fff;border-radius:12px;padding:16px;">
+            <img src="assets/instructor-books.png" alt="임헌수 대표 집필·감수 도서 목록" style="width:100%;height:auto;display:block;">
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============ CURRICULUM ============ -->
-  <section data-screen-label="Curriculum" style="padding:64px 40px;background:#eef2fb;">
+  <section id="curriculum" data-screen-label="Curriculum" style="padding:64px 40px;background:#eef2fb;scroll-margin-top:72px;">
     <div style="text-align:center;margin-bottom:8px;">
-      <div style="font-size:15px;font-weight:700;color:#2f6feb;letter-spacing:0.5px;">CURRICULUM</div>
+      <div style="font-size:17px;font-weight:700;color:#2f6feb;letter-spacing:0.5px;">CURRICULUM</div>
     </div>
-    <h2 style="text-align:center;font-size:32px;font-weight:800;margin:0 0 32px;color:#14162b;">4시간 × 2주 커리큘럼</h2>
-    <div style="max-width:1100px;margin:0 auto;display:flex;gap:20px;flex-wrap:wrap;">
+    <h2 style="text-align:center;font-size:35px;font-weight:800;margin:0 0 32px;color:#14162b;">4시간 × 2주 커리큘럼</h2>
+    <div style="max-width:1340px;margin:0 auto;display:flex;gap:20px;flex-wrap:wrap;">
       <sc-for list="{{ curriculum }}" as="w" hint-placeholder-count="2">
         <div style="flex:1 1 420px;min-width:340px;background:#fff;border-radius:14px;overflow:hidden;border:1px solid #e6e9f2;" data-mq="wide-card">
-          <div style="background:{{ w.headerBg }};color:#fff;font-weight:700;font-size:18px;padding:14px 18px;">{{ w.header }}</div>
+          <div style="background:{{ w.headerBg }};color:#fff;font-weight:700;font-size:20px;padding:14px 18px;">{{ w.header }}</div>
           <div style="padding:20px 22px;">
             <sc-for list="{{ w.bullets }}" as="b" hint-placeholder-count="6">
-              <div style="display:flex;gap:8px;font-size:18px;color:#33395a;margin-bottom:9px;"><span style="color:{{ w.dot }};">●</span>{{ b }}</div>
+              <div style="display:flex;gap:8px;font-size:20px;color:#33395a;margin-bottom:9px;"><span style="color:{{ w.dot }};">●</span>{{ b }}</div>
             </sc-for>
           </div>
-          <div style="background:{{ w.headerBg }};color:#fff;font-size:16px;font-weight:600;padding:11px 18px;">결과물 | {{ w.result }}</div>
+          <div style="background:{{ w.headerBg }};color:#fff;font-size:18px;font-weight:600;padding:11px 18px;">결과물 | {{ w.result }}</div>
         </div>
       </sc-for>
     </div>
   </section>
 
   <!-- ============ AFTER CLASS ============ -->
-  <section data-screen-label="After Class" style="padding:64px 40px 56px;background:#ffffff;">
+  <section id="results" data-screen-label="After Class" style="padding:64px 40px 56px;background:#12193a;scroll-margin-top:72px;">
     <div style="text-align:center;margin-bottom:8px;">
-      <div style="font-size:15px;font-weight:700;color:#2f6feb;letter-spacing:0.5px;">RESULT</div>
+      <div style="font-size:17px;font-weight:700;color:#7ea6ff;letter-spacing:0.5px;">RESULT</div>
     </div>
-    <h2 style="text-align:center;font-size:32px;font-weight:800;margin:0 0 32px;color:#14162b;">수업이 끝나면 이것이 남습니다</h2>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;max-width:1200px;margin:0 auto;">
+    <h2 style="text-align:center;font-size:35px;font-weight:800;margin:0 0 32px;color:#fff;">수업이 끝나면 이것이 남습니다</h2>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;max-width:1340px;margin:0 auto;">
       <sc-for list="{{ afterItems }}" as="a" hint-placeholder-count="6">
         <div style="width:160px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;">
-          <div style="width:56px;height:56px;border-radius:12px;background:#fff;border:1px solid #e6e9f2;display:flex;align-items:center;justify-content:center;">{{ a.icon }}</div>
-          <div style="font-size:16px;font-weight:600;color:#33395a;line-height:1.5;">{{ a.label }}</div>
+          <div style="width:56px;height:56px;border-radius:12px;background:#fff;border:1px solid rgba(255,255,255,0.14);display:flex;align-items:center;justify-content:center;font-size:26px;">
+            <sc-if value="{{ a.isImg }}" hint-placeholder-val="{{ false }}">
+              <img src="{{ a.img }}" alt="GitHub" style="width:28px;height:28px;object-fit:contain;">
+            </sc-if>
+            <sc-if value="{{ a.isText }}" hint-placeholder-val="{{ true }}">
+              {{ a.icon }}
+            </sc-if>
+          </div>
+          <div style="font-size:18px;font-weight:600;color:#c7cee5;line-height:1.5;">{{ a.label }}</div>
         </div>
       </sc-for>
     </div>
@@ -364,20 +424,20 @@
   <!-- ============ CASE STUDIES ============ -->
   <section data-screen-label="Case Studies" style="padding:64px 40px;background:#eef2fb;">
     <div style="text-align:center;margin-bottom:32px;">
-      <div style="font-size:15px;font-weight:700;color:#2f6feb;margin-bottom:8px;">CASE STUDY</div>
-      <h2 style="font-size:32px;font-weight:800;margin:0;color:#14162b;">수강생이 직접 만든 AI 홈페이지</h2>
+      <div style="font-size:17px;font-weight:700;color:#2f6feb;margin-bottom:8px;">CASE STUDY</div>
+      <h2 style="font-size:35px;font-weight:800;margin:0;color:#14162b;">수강생이 직접 만든 AI 홈페이지</h2>
     </div>
-    <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;max-width:1100px;margin:0 auto;">
+    <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;max-width:1340px;margin:0 auto;">
       <a href="https://geosangmarketing.com/" target="_blank" rel="noopener" style="flex:1 1 420px;min-width:340px;background:#fff;border:1px solid #e6e9f2;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" data-mq="wide-card">
         <div style="height:26px;background:#eef1f8;display:flex;align-items:center;gap:5px;padding:0 10px;">
           <div style="width:7px;height:7px;border-radius:50%;background:#e2665a;"></div>
           <div style="width:7px;height:7px;border-radius:50%;background:#e8c14c;"></div>
           <div style="width:7px;height:7px;border-radius:50%;background:#59c26b;"></div>
         </div>
-        <img src="assets/case-geosang.png" alt="거상마케팅센터 홈페이지 사례" style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;">
+        <img src="assets/case-geosang.png" alt="거상마케팅센터 홈페이지 사례" style="width:100%;aspect-ratio:5/3;object-fit:cover;object-position:top;display:block;">
         <div style="padding:18px 20px;">
-          <div style="font-weight:700;font-size:17px;color:#1a1f36;margin-bottom:4px;">거상마케팅센터</div>
-          <div style="font-size:15px;color:#828aa0;">geosangmarketing.com ↗</div>
+          <div style="font-weight:700;font-size:19px;color:#1a1f36;margin-bottom:4px;">거상마케팅센터</div>
+          <div style="font-size:17px;color:#828aa0;">geosangmarketing.com ↗</div>
         </div>
       </a>
       <a href="https://dmdnp.vercel.app/#top" target="_blank" rel="noopener" style="flex:1 1 420px;min-width:340px;background:#fff;border:1px solid #e6e9f2;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:block;" data-mq="wide-card">
@@ -386,61 +446,61 @@
           <div style="width:7px;height:7px;border-radius:50%;background:#e8c14c;"></div>
           <div style="width:7px;height:7px;border-radius:50%;background:#59c26b;"></div>
         </div>
-        <img src="assets/case-dnp.png" alt="대명DNP 홈페이지 사례" style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;">
+        <img src="assets/case-dnp.png" alt="대명DNP 홈페이지 사례" style="width:100%;aspect-ratio:5/3;object-fit:cover;object-position:top;display:block;">
         <div style="padding:18px 20px;">
-          <div style="font-weight:700;font-size:17px;color:#1a1f36;margin-bottom:4px;">대명DNP</div>
-          <div style="font-size:15px;color:#828aa0;">dmdnp.vercel.app ↗</div>
+          <div style="font-weight:700;font-size:19px;color:#1a1f36;margin-bottom:4px;">대명DNP</div>
+          <div style="font-size:17px;color:#828aa0;">dmdnp.vercel.app ↗</div>
         </div>
       </a>
     </div>
   </section>
 
   <!-- ============ PRICING ============ -->
-  <section data-screen-label="Pricing" style="padding:52px 40px;background:#12193a;">
-    <div style="max-width:1260px;margin:0 auto;display:grid;grid-template-columns:minmax(160px,0.8fr) minmax(140px,0.6fr) minmax(180px,1fr) minmax(150px,0.8fr);gap:36px;align-items:center;" data-mq="pricing-grid">
+  <section id="pricing" data-screen-label="Pricing" style="padding:52px 40px;background:#12193a;scroll-margin-top:72px;">
+    <div style="max-width:1340px;margin:0 auto;display:grid;grid-template-columns:minmax(160px,0.8fr) minmax(140px,0.6fr) minmax(180px,1fr) minmax(150px,0.8fr);gap:36px;align-items:center;" data-mq="pricing-grid">
       <div style="min-width:0;">
-        <div style="color:#8fa5e8;font-size:16px;font-weight:700;margin-bottom:8px;">1기 얼리버드 특별가</div>
+        <div style="color:#8fa5e8;font-size:18px;font-weight:700;margin-bottom:8px;">1기 얼리버드 특별가</div>
         <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:6px;">
-          <span style="color:#fff;font-size:46px;font-weight:800;">330,000</span><span style="color:#fff;font-size:22px;font-weight:700;">원</span>
+          <span style="color:#fff;font-size:50px;font-weight:800;">330,000</span><span style="color:#fff;font-size:24px;font-weight:700;">원</span>
         </div>
-        <div style="color:#e2665a;font-size:32px;text-decoration:line-through;">정가 440,000원</div>
-        <div style="color:#a9b3ce;font-size:16px;margin-top:4px;">부가세 포함</div>
+        <div style="color:#e2665a;font-size:35px;text-decoration:line-through;">정가 440,000원</div>
+        <div style="color:#a9b3ce;font-size:18px;margin-top:4px;">부가세 포함</div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;min-width:0;" data-mq="pricing-icongrid">
         <sc-for list="{{ pricingIcons }}" as="pi" hint-placeholder-count="4">
           <div style="display:flex;flex-direction:column;align-items:center;gap:6px;width:76px;text-align:center;">
-            <div style="font-size:24px;">{{ pi.icon }}</div>
-            <div style="color:#c7cee5;font-size:15px;font-weight:600;line-height:1.3;">{{ pi.label }}</div>
+            <div style="font-size:27px;">{{ pi.icon }}</div>
+            <div style="color:#c7cee5;font-size:17px;font-weight:600;line-height:1.3;">{{ pi.label }}</div>
           </div>
         </sc-for>
       </div>
       <div style="min-width:0;padding-left:56px;" data-mq="pricing-checklist">
         <sc-for list="{{ pricingChecks }}" as="pc" hint-placeholder-count="6">
-          <div style="display:flex;gap:7px;color:#dfe4f4;font-size:16px;margin-bottom:7px;"><span style="color:#4d84f5;">✔</span>{{ pc }}</div>
+          <div style="display:flex;gap:7px;color:#dfe4f4;font-size:18px;margin-bottom:7px;"><span style="color:#4d84f5;">✔</span>{{ pc }}</div>
         </sc-for>
       </div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0;">
-        <div style="background:#2f6feb;color:#fff;font-weight:700;font-size:19px;padding:15px 30px;border-radius:10px;white-space:nowrap;">1기 신청하기 →</div>
-        <div style="color:#8b96b8;font-size:15px;text-align:center;max-width:180px;line-height:1.5;">홈페이지를 직접 만들고, 직접 고칠 수 있는 실전 과정</div>
+        <div style="background:#2f6feb;color:#fff;font-weight:700;font-size:21px;padding:15px 30px;border-radius:10px;white-space:nowrap;">1기 신청하기 →</div>
+        <div style="color:#8b96b8;font-size:17px;text-align:center;max-width:180px;line-height:1.5;">홈페이지를 직접 만들고, 직접 고칠 수 있는 실전 과정</div>
       </div>
     </div>
   </section>
 
   <!-- ============ FAQ ============ -->
-  <section data-screen-label="FAQ" style="padding:64px 40px;background:#ffffff;">
+  <section id="faq" data-screen-label="FAQ" style="padding:64px 40px;background:#ffffff;scroll-margin-top:72px;">
     <div style="text-align:center;margin-bottom:8px;">
-      <div style="font-size:15px;font-weight:700;color:#2f6feb;letter-spacing:0.5px;">FAQ</div>
+      <div style="font-size:17px;font-weight:700;color:#2f6feb;letter-spacing:0.5px;">FAQ</div>
     </div>
-    <h2 style="text-align:center;font-size:32px;font-weight:800;margin:0 0 32px;color:#14162b;">자주 묻는 질문</h2>
-    <div style="max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:10px;">
+    <h2 style="text-align:center;font-size:35px;font-weight:800;margin:0 0 32px;color:#14162b;">자주 묻는 질문</h2>
+    <div style="max-width:1340px;margin:0 auto;display:flex;flex-direction:column;gap:10px;">
       <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
         <div style="border:1px solid #e6e9f2;border-radius:12px;overflow:hidden;">
           <div onclick="{{ f.toggle }}" style="display:flex;justify-content:space-between;align-items:center;padding:16px 20px;cursor:pointer;background:#f8f9fc;">
-            <div style="font-size:18px;font-weight:700;color:#1a1f36;">{{ f.q }}</div>
-            <div style="font-size:20px;color:#2f6feb;font-weight:700;">{{ f.markSym }}</div>
+            <div style="font-size:20px;font-weight:700;color:#1a1f36;">{{ f.q }}</div>
+            <div style="font-size:22px;color:#2f6feb;font-weight:700;">{{ f.markSym }}</div>
           </div>
           <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
-            <div style="padding:14px 20px;font-size:18px;color:#5b6478;background:#fff;line-height:1.6;">{{ f.a }}</div>
+            <div style="padding:14px 20px;font-size:20px;color:#5b6478;background:#fff;line-height:1.6;">{{ f.a }}</div>
           </sc-if>
         </div>
       </sc-for>
@@ -449,25 +509,25 @@
 
   <!-- ============ FOOTER CTA ============ -->
   <footer data-screen-label="Footer CTA" style="background:#0d1330;padding:40px;">
-    <div style="max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;">
+    <div style="max-width:1340px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;">
       <div style="display:flex;align-items:center;gap:16px;">
-        <div style="width:48px;height:48px;border-radius:12px;background:#1a2350;display:flex;align-items:center;justify-content:center;font-size:26px;">🚀</div>
+        <div style="width:48px;height:48px;border-radius:12px;background:#1a2350;display:flex;align-items:center;justify-content:center;font-size:29px;">🚀</div>
         <div>
-          <div style="color:#fff;font-weight:800;font-size:21px;margin-bottom:4px;">외주 맡기기 전에, 이번엔 직접 만들어보세요</div>
-          <div style="color:#9aa4c4;font-size:16px;">AI로 홈페이지를 만들고 배포하는 능력은 앞으로도 계속 남는 자산입니다.</div>
+          <div style="color:#fff;font-weight:800;font-size:23px;margin-bottom:4px;">외주 맡기기 전에, 이번엔 직접 만들어보세요</div>
+          <div style="color:#9aa4c4;font-size:18px;">AI로 홈페이지를 만들고 배포하는 능력은 앞으로도 계속 남는 자산입니다.</div>
         </div>
       </div>
       <div style="display:flex;gap:10px;">
-        <div style="background:#2f6feb;color:#fff;font-weight:700;font-size:18px;padding:12px 22px;border-radius:9px;">지금 신청하기</div>
-        <div style="background:transparent;color:#fff;font-weight:700;font-size:18px;padding:12px 22px;border-radius:9px;border:1px solid #38406c;">문의하기</div>
+        <div style="background:#2f6feb;color:#fff;font-weight:700;font-size:20px;padding:12px 22px;border-radius:9px;">지금 신청하기</div>
+        <div style="background:transparent;color:#fff;font-weight:700;font-size:20px;padding:12px 22px;border-radius:9px;border:1px solid #38406c;">문의하기</div>
       </div>
     </div>
-    <div style="max-width:1000px;margin:26px auto 0;border-top:1px solid #232a52;padding-top:22px;text-align:left;">
-      <div style="color:#8b96b8;font-size:14px;line-height:1.7;">
+    <div style="max-width:1340px;margin:26px auto 0;border-top:1px solid #232a52;padding-top:22px;text-align:left;">
+      <div style="color:#8b96b8;font-size:16px;line-height:1.7;">
         거상스쿨(주) | AI 마케팅 스쿨_AI 홈페이지 실전 제작 과정<br>
         문의: 임헌수 대표 <span style="color:#7ea6ff;font-weight:700;">010-3422-8075</span> · 권현임 교육팀장 <span style="color:#7ea6ff;font-weight:700;">010-5795-8075</span> | 기업은행 <span style="color:#7ea6ff;font-weight:700;">667-045456-04-010</span>
       </div>
-      <div style="color:#5c6690;font-size:13px;margin-top:14px;">© 2026 거상스쿨. All rights reserved.</div>
+      <div style="color:#5c6690;font-size:15px;margin-top:14px;">© 2026 거상스쿨. All rights reserved.</div>
     </div>
   </footer>
 
@@ -486,8 +546,18 @@ class Component extends DCLogic {
     this.setState(s => ({ mobileMenuOpen: !s.mobileMenuOpen }));
   }
 
+  closeMenu() {
+    this.setState({ mobileMenuOpen: false });
+  }
+
   renderVals() {
-    const navLinks = ["과정소개", "커리큘럼", "결과물", "수강료", "FAQ"];
+    const navLinks = [
+      { label: "과정소개", href: "#intro" },
+      { label: "커리큘럼", href: "#curriculum" },
+      { label: "결과물", href: "#results" },
+      { label: "수강료", href: "#pricing" },
+      { label: "FAQ", href: "#faq" },
+    ];
 
     const heroChips = [
       { icon: "⏱", label: "4시간 × 2주" },
@@ -511,11 +581,11 @@ class Component extends DCLogic {
     ];
 
     const steps = [
-      { num: 1, color: "#16a34a", title: "ChatGPT로 기획", bullets: ["타깃 분석", "문제·해결 정리", "핵심 메시지", "CTA 설계", "목업 레이아웃 구상"] },
-      { num: 2, color: "#8b5cf6", title: "Claude Design으로 실제 페이지 제작", bullets: ["반응형 페이지", "HTML/CSS/JS to React", "버튼·링크 연결", "컬러·폰트 적용", "UX 흐름 점검"] },
-      { num: 3, color: "#1f2937", title: "GitHub에 코드 저장", bullets: ["버전 관리", "안전한 보관", "배포 준비", "커밋 이력 관리", "롤백 가능"] },
-      { num: 4, color: "#2f6feb", title: "Vercel로 웹 배포", bullets: ["원클릭 배포", "공개 URL", "도메인 연결", "자동 빌드", "HTTPS 적용"] },
-      { num: 5, color: "#2563eb", title: "schemaWorks SEO·GEO 진단", bullets: ["Schema.org", "메타 태그", "sitemap/robots/llms.txt", "AI 크롤러 대응", "최종 점검"] },
+      { num: 1, color: "#16a34a", logo: "assets/step-chatgpt.png", title: "ChatGPT로 기획", bullets: ["타깃 분석", "문제·해결 정리", "핵심 메시지", "CTA 설계", "목업 레이아웃 구상"] },
+      { num: 2, color: "#8b5cf6", logo: "assets/step-claude.png", title: "Claude Design으로 실제 페이지 제작", bullets: ["반응형 페이지", "HTML/CSS/JS to React", "버튼·링크 연결", "컬러·폰트 적용", "UX 흐름 점검"] },
+      { num: 3, color: "#1f2937", logo: "assets/step-github.png", title: "GitHub에 코드 저장", bullets: ["버전 관리", "안전한 보관", "배포 준비", "커밋 이력 관리", "롤백 가능"] },
+      { num: 4, color: "#2f6feb", logo: "assets/step-vercel.png", title: "Vercel로 웹 배포", bullets: ["원클릭 배포", "공개 URL", "도메인 연결", "자동 빌드", "HTTPS 적용"] },
+      { num: 5, color: "#2563eb", logo: "assets/step-seo.png", title: "schemaWorks SEO·GEO 진단", bullets: ["Schema.org", "메타 태그", "필수 파일 3종 설정", "AI 크롤러 대응", "최종 점검"] },
     ];
 
     const seoChecks = [
@@ -553,12 +623,12 @@ class Component extends DCLogic {
     ];
 
     const afterItems = [
-      { icon: "📋", label: "홈페이지 기획안" },
-      { icon: "🖼", label: "디자인 목업" },
-      { icon: "</>", label: "실제 웹페이지 코드\n(HTML/CSS/JS 또는 React)" },
-      { icon: "GH", label: "GitHub 저장소" },
-      { icon: "▲", label: "Vercel 배포 URL" },
-      { icon: "✅", label: "SEO·GEO 점검\n체크리스트" },
+      { icon: "📋", label: "홈페이지 기획안", isText: true },
+      { icon: "🎨", label: "디자인 목업", isText: true },
+      { icon: "</>", label: "실제 웹페이지 코드\n(HTML/CSS/JS 또는 React)", isText: true },
+      { img: "assets/github-mark.png", label: "GitHub 저장소", isImg: true },
+      { icon: "▲", label: "Vercel 배포 URL", isText: true },
+      { icon: "✅", label: "SEO·GEO 최적화된\n홈페이지", isText: true },
     ];
 
     const pricingIcons = [
@@ -596,6 +666,7 @@ class Component extends DCLogic {
       pricingIcons, pricingChecks, faqs,
       mobileMenuOpen: this.state.mobileMenuOpen,
       toggleMenu: () => this.toggleMenu(),
+      closeMenu: () => this.closeMenu(),
     };
   }
 }
