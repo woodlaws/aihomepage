@@ -1,6 +1,17 @@
-# AI마케팅스쿨
+# AI마케팅스쿨 - AI 홈페이지 제작 실전과정
 
-> 2주 만에 완성하는 AI 홈페이지 제작 실전과정 랜딩페이지입니다. ChatGPT 기획, Claude 제작, GitHub 저장, Vercel 배포, schemaWorks SEO·GEO 진단까지 다루는 실습 중심 교육과정입니다.
+AI마케팅스쿨은 ChatGPT, Claude, GitHub, Vercel을 활용해 2주 만에 실제 AI 홈페이지를 제작하고 배포하는 실전 교육 과정입니다.
+
+## 핵심 과정
+- AI 홈페이지 기획
+- Claude Design을 활용한 랜딩페이지 제작
+- GitHub 저장소 생성
+- Vercel 배포
+- 도메인 연결
+- SEO, GEO, AEO 기본 설정
+- Open Graph 이미지 설정
+- robots.txt, sitemap.xml, llms.txt 적용
+- schemaWorks 기반 SEO-GEO 진단 및 개선
 
 ## 과정 정보
 - 과정명: AI 홈페이지 제작 실전과정 (AI마케팅스쿨)
@@ -9,5 +20,17 @@
 - 1기 수강료: 330,000원 (부가세 포함)
 - 문의: 임헌수 대표 010-3422-8075, 권현임 교육팀장 010-5795-8075
 
+## 대상
+- 회사 홈페이지가 필요한 대표
+- 강의, 컨설팅, 랜딩페이지가 필요한 1인 사업자
+- AI로 제작과 배포를 직접 해보고 싶은 마케터
+- 외주 없이 빠르게 웹사이트를 만들고 싶은 소상공인
+
 ## 페이지
 - [홈](https://aihomepage-indol.vercel.app/): 과정 소개, 5단계 제작 프로세스, SEO·GEO 진단 설명, 커리큘럼, 수강 사례, 수강료, FAQ
+
+## 대표 URL
+https://aihomepage-indol.vercel.app
+
+## 요약
+배우고 끝나는 수업이 아니라, 실제 AI 홈페이지가 남는 실전 과정입니다.
