@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>제작사례 | AI홈페이지스쿨</title>
+<meta name="description" content="AI홈페이지스쿨 제작사례 페이지입니다. 수강생이 직접 만든 AI홈페이지 사례와 ChatGPT 기획, Claude Design/Codex 제작, GitHub·Vercel 배포, schemaWorks AIO 점검 과정을 확인할 수 있습니다.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aihomepage-indol.vercel.app/examples">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI홈페이지스쿨">
+<meta property="og:title" content="제작사례 | AI홈페이지스쿨">
+<meta property="og:description" content="AI홈페이지스쿨 제작사례 페이지입니다. 수강생이 직접 만든 AI홈페이지 사례와 ChatGPT 기획, Claude Design/Codex 제작, GitHub·Vercel 배포, schemaWorks AIO 점검 과정을 확인할 수 있습니다.">
+<meta property="og:image" content="https://aihomepage-indol.vercel.app/og-image.png">
+<meta property="og:url" content="https://aihomepage-indol.vercel.app/examples">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="제작사례 | AI홈페이지스쿨">
+<meta name="twitter:description" content="AI홈페이지스쿨 제작사례 페이지입니다. 수강생이 직접 만든 AI홈페이지 사례와 ChatGPT 기획, Claude Design/Codex 제작, GitHub·Vercel 배포, schemaWorks AIO 점검 과정을 확인할 수 있습니다.">
+<meta name="twitter:image" content="https://aihomepage-indol.vercel.app/og-image.png">
+<link rel="icon" href="../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","@id":"https://aihomepage-indol.vercel.app/examples#webpage","url":"https://aihomepage-indol.vercel.app/examples","name":"제작사례 | AI홈페이지스쿨","description":"AI홈페이지스쿨 제작사례 페이지입니다. 수강생이 직접 만든 AI홈페이지 사례와 ChatGPT 기획, Claude Design/Codex 제작, GitHub·Vercel 배포, schemaWorks AIO 점검 과정을 확인할 수 있습니다.","inLanguage":"ko-KR","isPartOf":{"@type":"WebSite","@id":"https://aihomepage-indol.vercel.app/#website","url":"https://aihomepage-indol.vercel.app","name":"AI홈페이지스쿨"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://aihomepage-indol.vercel.app/"},{"@type":"ListItem","position":2,"name":"제작사례","item":"https://aihomepage-indol.vercel.app/examples"}]}}
+</script>
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;background:#f5f7fb;color:#14162b;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:#2f6feb;} a:hover{color:#1d54c4;}
+  h1,h2,h3,p{word-break:keep-all;text-wrap:pretty;}
+  @media (max-width:1160px){
+    .dnav{display:none!important;}
+    .burger{display:flex!important;}
+    .hdr{padding:14px 20px!important;}
+  }
+  @media (max-width:768px){
+    .pad{padding-left:18px!important;padding-right:18px!important;padding-top:48px!important;padding-bottom:48px!important;}
+    h1{font-size:30px!important;}
+    h2{font-size:25px!important;}
+    h3{font-size:20px!important;}
+    .col{min-width:0!important;flex-basis:100%!important;max-width:100%!important;}
+    .ctarow{flex-direction:column!important;}
+    .ctarow > a{text-align:center;}
+    .casegrid{grid-template-columns:1fr!important;}
+  }
+</style>
+</head>
+<body>
+
+  <header style="position:fixed;top:0;left:0;right:0;z-index:50;background:#fff;border-bottom:1px solid #ececf2;min-height:64px;">
+    <div style="max-width:1340px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 40px;gap:20px;" class="hdr">
+      <a href="/" style="display:flex;align-items:center;gap:8px;color:#14162b;font-weight:800;font-size:23px;letter-spacing:-0.3px;white-space:nowrap;text-decoration:none;">
+        <img src="../assets/logo.png" alt="AI홈페이지스쿨" style="height:28px;width:auto;display:block;">AI홈페이지스쿨
+      </a>
+      <nav class="dnav" style="display:flex;align-items:center;gap:20px;">
+        <a href="/about" style="color:#3b4258;font-size:17px;font-weight:500;white-space:nowrap;text-decoration:none;">스쿨 소개</a>
+        <a href="/curriculum" style="color:#3b4258;font-size:17px;font-weight:500;white-space:nowrap;text-decoration:none;">4주 커리큘럼</a>
+        <a href="/aio" style="color:#3b4258;font-size:17px;font-weight:500;white-space:nowrap;text-decoration:none;">AIO 홈페이지</a>
+        <a href="/schemaworks" style="color:#3b4258;font-size:17px;font-weight:500;white-space:nowrap;text-decoration:none;">스키마웍스</a>
+        <a href="/examples" style="color:#2f6feb;font-size:17px;font-weight:700;white-space:nowrap;text-decoration:none;">제작사례</a>
+        <a href="/apply" style="color:#3b4258;font-size:17px;font-weight:500;white-space:nowrap;text-decoration:none;">수강 안내</a>
+        <a href="/apply" style="background:#2f6feb;color:#fff;font-size:17px;font-weight:700;padding:10px 18px;border-radius:8px;white-space:nowrap;text-decoration:none;">수강 신청하기</a>
+      </nav>
+      <div class="burger" onclick="document.getElementById('mnav').style.display=document.getElementById('mnav').style.display==='flex'?'none':'flex'" style="display:none;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px;cursor:pointer;">
+        <div style="width:24px;height:2px;background:#14162b;border-radius:2px;"></div>
+        <div style="width:24px;height:2px;background:#14162b;border-radius:2px;"></div>
+        <div style="width:24px;height:2px;background:#14162b;border-radius:2px;"></div>
+      </div>
+    </div>
+    <div id="mnav" style="display:none;flex-direction:column;background:#fff;border-top:1px solid #ececf2;padding:12px 20px 20px;gap:2px;">
+      <a href="/about" style="color:#3b4258;font-size:17px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">스쿨 소개</a>
+      <a href="/curriculum" style="color:#3b4258;font-size:17px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">4주 커리큘럼</a>
+      <a href="/aio" style="color:#3b4258;font-size:17px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">AIO 홈페이지</a>
+      <a href="/schemaworks" style="color:#3b4258;font-size:17px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">스키마웍스</a>
+      <a href="/examples" style="color:#3b4258;font-size:17px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">제작사례</a>
+      <a href="/apply" style="color:#3b4258;font-size:17px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">수강 안내</a>
+      <a href="/apply" style="background:#2f6feb;color:#fff;font-size:17px;font-weight:700;padding:13px 18px;border-radius:8px;text-align:center;margin-top:10px;text-decoration:none;">수강 신청하기</a>
+    </div>
+  </header>
+  <div style="height:66px;"></div>
+
+  <!-- HERO -->
+  <section class="pad" style="background:#12193a;padding:72px 40px 64px;">
+    <div style="max-width:1340px;margin:0 auto;display:flex;gap:56px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;">
+      <div style="flex:1 1 540px;min-width:400px;max-width:660px;" class="col">
+        <div style="font-size:14px;font-weight:800;color:#7ea6ff;letter-spacing:2px;margin-bottom:18px;">AI HOMEPAGE EXAMPLES</div>
+        <h1 style="font-size:44px;line-height:1.34;font-weight:800;margin:0 0 20px;color:#fff;letter-spacing:-0.6px;">수강생이 직접 만든<br><span style="color:#7ea6ff;">AI홈페이지 제작사례</span></h1>
+        <p style="font-size:19px;line-height:1.85;color:#a9b3ce;margin:0 0 14px;">
+          AI홈페이지스쿨은 강의를 듣고 끝나는 과정이 아닙니다. 수강생이 직접 기획하고, AI 도구로 제작하고, 배포까지 경험하며 자신의 공식 홈페이지를 완성하는 실전 과정입니다.
+        </p>
+        <p style="font-size:18px;line-height:1.8;color:#c7cee5;margin:0 0 26px;font-weight:600;">이 페이지에서는 실제 수강생이 직접 만든 AI홈페이지 사례를 확인할 수 있습니다.</p>
+        <div style="display:flex;gap:9px;flex-wrap:wrap;margin-bottom:28px;">
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:9px 14px;font-size:16px;font-weight:600;color:#dfe3f5;">수강생 직접 제작</div><div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:9px 14px;font-size:16px;font-weight:600;color:#dfe3f5;">AI 기획</div><div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:9px 14px;font-size:16px;font-weight:600;color:#dfe3f5;">Claude / Codex 제작</div><div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:9px 14px;font-size:16px;font-weight:600;color:#dfe3f5;">반응형 홈페이지</div><div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:9px 14px;font-size:16px;font-weight:600;color:#dfe3f5;">Vercel 배포</div><div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:9px 14px;font-size:16px;font-weight:600;color:#dfe3f5;">AIO 점검 가능</div><div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:9px 14px;font-size:16px;font-weight:600;color:#dfe3f5;">실전 결과물 중심</div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;" class="ctarow">
+          <a href="/apply" style="background:#2f6feb;color:#fff;font-weight:700;font-size:19px;padding:16px 28px;border-radius:10px;text-decoration:none;box-shadow:0 10px 22px rgba(47,111,235,0.35);">수강 신청하기 →</a>
+          <a href="/curriculum" style="background:transparent;color:#fff;font-weight:700;font-size:19px;padding:16px 28px;border-radius:10px;border:1px solid rgba(255,255,255,0.35);text-decoration:none;">4주 커리큘럼 보기</a>
+        </div>
+      </div>
+
+      <div style="flex:1 1 400px;min-width:340px;max-width:500px;display:grid;grid-template-columns:1fr 1fr;gap:14px;" class="col">
+        
+        <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,0.25);">
+          <div style="height:22px;background:#eef1f8;display:flex;align-items:center;gap:4px;padding:0 9px;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#e2665a;"></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#e8c14c;"></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#59c26b;"></div>
+          </div>
+          <img src="../assets/case-geosang.png" alt="거상마케팅센터 홈페이지 제작사례 미리보기" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block;">
+        </div>
+        <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,0.25);">
+          <div style="height:22px;background:#eef1f8;display:flex;align-items:center;gap:4px;padding:0 9px;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#e2665a;"></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#e8c14c;"></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#59c26b;"></div>
+          </div>
+          <img src="../assets/case-dnp.png" alt="대명DNP 홈페이지 제작사례 미리보기" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block;">
+        </div>
+        <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,0.25);">
+          <div style="height:22px;background:#eef1f8;display:flex;align-items:center;gap:4px;padding:0 9px;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#e2665a;"></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#e8c14c;"></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#59c26b;"></div>
+          </div>
+          <img src="../assets/case-peach.png" alt="홍천 대흥복숭아 홈페이지 제작사례 미리보기" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block;">
+        </div>
+        <div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,0.25);">
+          <div style="height:22px;background:#eef1f8;display:flex;align-items:center;gap:4px;padding:0 9px;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#e2665a;"></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#e8c14c;"></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#59c26b;"></div>
+          </div>
+          <img src="../assets/case-yujin.png" alt="이유진 마케터 랜딩페이지 홈페이지 제작사례 미리보기" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="pad" style="background:#ffffff;padding:72px 40px;">
+    <div style="max-width:1340px;margin:0 auto;"><div style="font-size:14px;font-weight:800;color:#2f6feb;letter-spacing:1.5px;margin-bottom:14px;">STUDENT CASES</div><h2 style="font-size:32px;font-weight:800;margin:0 0 16px;color:#14162b;line-height:1.42;">실제 수강생이 직접 만든 AI홈페이지</h2><p style="font-size:18px;line-height:1.85;color:#5b6478;margin:0 0 32px;max-width:880px;">아래 사례들은 홈 랜딩페이지에서도 소개된 실제 제작사례입니다. 수강생이 AI 도구를 활용해 직접 기획하고 제작한 홈페이지를 모았습니다. 완성도는 업종과 준비 자료에 따라 다를 수 있지만, AI를 활용하면 1인기업과 소상공인도 자신의 공식 홈페이지를 직접 만들 수 있다는 것을 보여줍니다.</p><div class="casegrid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;">
+      <div style="background:#fff;border:1px solid #e6e9f2;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+        <a href="https://geosangmarketing.com/" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
+          <div style="height:26px;background:#eef1f8;display:flex;align-items:center;gap:5px;padding:0 12px;">
+            <div style="width:7px;height:7px;border-radius:50%;background:#e2665a;"></div>
+            <div style="width:7px;height:7px;border-radius:50%;background:#e8c14c;"></div>
+            <div style="width:7px;height:7px;border-radius:50%;background:#59c26b;"></div>
+          </div>
+          <img src="../assets/case-geosang.png" alt="거상마케팅센터 홈페이지 제작사례" style="width:100%;aspect-ratio:5/3;object-fit:cover;object-position:top;display:block;">
+        </a>
+        <div style="padding:26px 26px 28px;display:flex;flex-direction:column;gap:18px;flex:1;">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+              <div style="background:#12193a;color:#fff;font-size:14px;font-weight:800;letter-spacing:1px;padding:5px 12px;border-radius:6px;">CASE 01</div>
+              <div style="background:#eaf1fe;color:#2f6feb;font-size:14px;font-weight:800;padding:5px 12px;border-radius:6px;">수강생 직접 제작</div>
+            </div>
+            <div style="font-size:24px;font-weight:800;color:#1a1f36;margin-bottom:6px;line-height:1.35;">거상마케팅센터</div>
+            <div style="font-size:16px;font-weight:700;color:#2f6feb;margin-bottom:10px;">1인기업·교육기관 공식 홈페이지</div>
+            <div style="font-size:17px;line-height:1.7;color:#5b6478;">교육과 컨설팅 서비스, 전문성, 상담 문의를 한곳에 정리한 공식 홈페이지입니다.</div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:800;color:#8b93ab;letter-spacing:0.5px;margin-bottom:10px;">제작 포인트</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>대표 서비스와 교육 과정 정리</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>신뢰 요소와 실적 배치</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>상담 CTA 구성</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>모바일 반응형 점검</span></div>
+            </div>
+          </div>
+          <div style="background:#f8f9fc;border:1px solid #eef1f8;border-radius:12px;padding:18px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
+            <div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">제작 목적</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">교육·컨설팅 서비스를 소개하는 공식 홈페이지 구축</div></div><div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">핵심 구성</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">소개, 서비스, 교육 과정, 문의 CTA</div></div><div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">배포 방식</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">커스텀 도메인 연결 웹사이트</div></div><div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">활용 포인트</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">고객에게 공유하는 공식 대표 링크 확보</div></div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:800;color:#8b93ab;letter-spacing:0.5px;margin-bottom:10px;">사용 도구</div>
+            <div style="display:flex;gap:7px;flex-wrap:wrap;">
+              <div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">ChatGPT</div><div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">Claude Design</div><div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">GitHub</div><div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">Vercel</div><div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">schemaWorks</div>
+            </div>
+          </div>
+          <div style="margin-top:auto;padding-top:6px;">
+            <a href="https://geosangmarketing.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#12193a;color:#fff;border-radius:9px;padding:14px 22px;font-size:16px;font-weight:700;text-decoration:none;">사이트 보기 · geosangmarketing.com ↗</a>
+          </div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #e6e9f2;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+        <a href="https://dmdnp.vercel.app/#top" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
+          <div style="height:26px;background:#eef1f8;display:flex;align-items:center;gap:5px;padding:0 12px;">
+            <div style="width:7px;height:7px;border-radius:50%;background:#e2665a;"></div>
+            <div style="width:7px;height:7px;border-radius:50%;background:#e8c14c;"></div>
+            <div style="width:7px;height:7px;border-radius:50%;background:#59c26b;"></div>
+          </div>
+          <img src="../assets/case-dnp.png" alt="대명DNP 홈페이지 제작사례" style="width:100%;aspect-ratio:5/3;object-fit:cover;object-position:top;display:block;">
+        </a>
+        <div style="padding:26px 26px 28px;display:flex;flex-direction:column;gap:18px;flex:1;">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+              <div style="background:#12193a;color:#fff;font-size:14px;font-weight:800;letter-spacing:1px;padding:5px 12px;border-radius:6px;">CASE 02</div>
+              <div style="background:#eaf1fe;color:#2f6feb;font-size:14px;font-weight:800;padding:5px 12px;border-radius:6px;">수강생 직접 제작</div>
+            </div>
+            <div style="font-size:24px;font-weight:800;color:#1a1f36;margin-bottom:6px;line-height:1.35;">대명DNP</div>
+            <div style="font-size:16px;font-weight:700;color:#2f6feb;margin-bottom:10px;">기업 소개 홈페이지</div>
+            <div style="font-size:17px;line-height:1.7;color:#5b6478;">회사 소개, 사업 영역, 제품·서비스, 문의 연결을 중심으로 구성한 기업형 홈페이지입니다.</div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:800;color:#8b93ab;letter-spacing:0.5px;margin-bottom:10px;">제작 포인트</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>회사 소개 구조화</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>사업 영역과 제품 정리</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>연락처와 문의 연결</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>반응형 레이아웃 점검</span></div>
+            </div>
+          </div>
+          <div style="background:#f8f9fc;border:1px solid #eef1f8;border-radius:12px;padding:18px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
+            <div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">제작 목적</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">기업 신뢰도를 전달하는 공식 소개 홈페이지 구축</div></div><div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">핵심 구성</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">회사 소개, 사업 영역, 제품, 문의</div></div><div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">배포 방식</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">Vercel 기반 웹사이트 배포</div></div><div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">활용 포인트</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">거래처와 고객에게 보내는 공식 회사 소개 링크</div></div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:800;color:#8b93ab;letter-spacing:0.5px;margin-bottom:10px;">사용 도구</div>
+            <div style="display:flex;gap:7px;flex-wrap:wrap;">
+              <div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">ChatGPT</div><div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">Claude Design</div><div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">GitHub</div><div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">Vercel</div>
+            </div>
+          </div>
+          <div style="margin-top:auto;padding-top:6px;">
+            <a href="https://dmdnp.vercel.app/#top" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#12193a;color:#fff;border-radius:9px;padding:14px 22px;font-size:16px;font-weight:700;text-decoration:none;">사이트 보기 · dmdnp.vercel.app ↗</a>
+          </div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #e6e9f2;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+        <a href="https://hongcheon-peach.vercel.app/" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
+          <div style="height:26px;background:#eef1f8;display:flex;align-items:center;gap:5px;padding:0 12px;">
+            <div style="width:7px;height:7px;border-radius:50%;background:#e2665a;"></div>
+            <div style="width:7px;height:7px;border-radius:50%;background:#e8c14c;"></div>
+            <div style="width:7px;height:7px;border-radius:50%;background:#59c26b;"></div>
+          </div>
+          <img src="../assets/case-peach.png" alt="홍천 대흥복숭아 홈페이지 제작사례" style="width:100%;aspect-ratio:5/3;object-fit:cover;object-position:top;display:block;">
+        </a>
+        <div style="padding:26px 26px 28px;display:flex;flex-direction:column;gap:18px;flex:1;">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+              <div style="background:#12193a;color:#fff;font-size:14px;font-weight:800;letter-spacing:1px;padding:5px 12px;border-radius:6px;">CASE 03</div>
+              <div style="background:#eaf1fe;color:#2f6feb;font-size:14px;font-weight:800;padding:5px 12px;border-radius:6px;">수강생 직접 제작</div>
+            </div>
+            <div style="font-size:24px;font-weight:800;color:#1a1f36;margin-bottom:6px;line-height:1.35;">홍천 대흥복숭아</div>
+            <div style="font-size:16px;font-weight:700;color:#2f6feb;margin-bottom:10px;">농산물 상품 랜딩페이지</div>
+            <div style="font-size:17px;line-height:1.7;color:#5b6478;">농장 스토리와 상품의 강점을 보여주고 주문·문의로 연결하는 상품 중심 랜딩페이지입니다.</div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:800;color:#8b93ab;letter-spacing:0.5px;margin-bottom:10px;">제작 포인트</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>농장과 상품 스토리 구성</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>상품 장점과 사진 배치</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>주문·문의 연결</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>시즌 판매 흐름 반영</span></div>
+            </div>
+          </div>
+          <div style="background:#f8f9fc;border:1px solid #eef1f8;border-radius:12px;padding:18px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
+            <div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">제작 목적</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">상품 스토리를 전달하고 주문 문의로 연결</div></div><div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">핵심 구성</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">농장 소개, 상품 강점, 후기, 주문 CTA</div></div><div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">배포 방식</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">Vercel 기반 웹사이트 배포</div></div><div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">활용 포인트</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">블로그·SNS에서 보내는 판매 링크로 활용</div></div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:800;color:#8b93ab;letter-spacing:0.5px;margin-bottom:10px;">사용 도구</div>
+            <div style="display:flex;gap:7px;flex-wrap:wrap;">
+              <div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">ChatGPT</div><div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">Claude Design</div><div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">Vercel</div>
+            </div>
+          </div>
+          <div style="margin-top:auto;padding-top:6px;">
+            <a href="https://hongcheon-peach.vercel.app/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#12193a;color:#fff;border-radius:9px;padding:14px 22px;font-size:16px;font-weight:700;text-decoration:none;">사이트 보기 · hongcheon-peach.vercel.app ↗</a>
+          </div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #e6e9f2;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;">
+        <a href="https://geosangmarketing-yujin.vercel.app/" target="_blank" rel="noopener" style="display:block;text-decoration:none;">
+          <div style="height:26px;background:#eef1f8;display:flex;align-items:center;gap:5px;padding:0 12px;">
+            <div style="width:7px;height:7px;border-radius:50%;background:#e2665a;"></div>
+            <div style="width:7px;height:7px;border-radius:50%;background:#e8c14c;"></div>
+            <div style="width:7px;height:7px;border-radius:50%;background:#59c26b;"></div>
+          </div>
+          <img src="../assets/case-yujin.png" alt="이유진 마케터 랜딩페이지 홈페이지 제작사례" style="width:100%;aspect-ratio:5/3;object-fit:cover;object-position:top;display:block;">
+        </a>
+        <div style="padding:26px 26px 28px;display:flex;flex-direction:column;gap:18px;flex:1;">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+              <div style="background:#12193a;color:#fff;font-size:14px;font-weight:800;letter-spacing:1px;padding:5px 12px;border-radius:6px;">CASE 04</div>
+              <div style="background:#eaf1fe;color:#2f6feb;font-size:14px;font-weight:800;padding:5px 12px;border-radius:6px;">수강생 직접 제작</div>
+            </div>
+            <div style="font-size:24px;font-weight:800;color:#1a1f36;margin-bottom:6px;line-height:1.35;">이유진 마케터 랜딩페이지</div>
+            <div style="font-size:16px;font-weight:700;color:#2f6feb;margin-bottom:10px;">강사·전문가 브랜딩 랜딩페이지</div>
+            <div style="font-size:17px;line-height:1.7;color:#5b6478;">프로필, 강의·컨설팅 소개, 신청 CTA를 한 페이지에 정리한 전문가 브랜딩형 랜딩페이지입니다.</div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:800;color:#8b93ab;letter-spacing:0.5px;margin-bottom:10px;">제작 포인트</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>프로필과 전문 분야 정리</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>강의·컨설팅 소개 구성</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>후기와 경력 배치</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">✔</span><span>신청 버튼과 문의 흐름 연결</span></div>
+            </div>
+          </div>
+          <div style="background:#f8f9fc;border:1px solid #eef1f8;border-radius:12px;padding:18px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
+            <div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">제작 목적</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">개인 브랜딩과 강의·컨설팅 신청 전환</div></div><div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">핵심 구성</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">프로필, 서비스, 후기, 신청 CTA</div></div><div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">배포 방식</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">Vercel 기반 웹사이트 배포</div></div><div><div style="font-size:14px;font-weight:800;color:#8b93ab;margin-bottom:5px;">활용 포인트</div><div style="font-size:16px;line-height:1.6;color:#3b4258;font-weight:600;">제안과 섭외 시 보내는 공식 소개 링크</div></div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:800;color:#8b93ab;letter-spacing:0.5px;margin-bottom:10px;">사용 도구</div>
+            <div style="display:flex;gap:7px;flex-wrap:wrap;">
+              <div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">ChatGPT</div><div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">Claude Design</div><div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">Codex</div><div style="background:#eef2fb;border:1px solid #dbe3f5;border-radius:7px;padding:7px 12px;font-size:15px;font-weight:700;color:#2f4a8c;">Vercel</div>
+            </div>
+          </div>
+          <div style="margin-top:auto;padding-top:6px;">
+            <a href="https://geosangmarketing-yujin.vercel.app/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#12193a;color:#fff;border-radius:9px;padding:14px 22px;font-size:16px;font-weight:700;text-decoration:none;">사이트 보기 · geosangmarketing-yujin.vercel.app ↗</a>
+          </div>
+        </div>
+      </div>
+        </div></div>
+  </section>
+
+
+  <section class="pad" style="background:#eef2fb;padding:72px 40px;">
+    <div style="max-width:1340px;margin:0 auto;"><div style="font-size:14px;font-weight:800;color:#2f6feb;letter-spacing:1.5px;margin-bottom:14px;">PROCESS</div><h2 style="font-size:32px;font-weight:800;margin:0 0 16px;color:#14162b;line-height:1.42;">이 사례들은 이렇게 만들어졌습니다</h2><p style="font-size:18px;line-height:1.85;color:#5b6478;margin:0 0 32px;max-width:880px;">AI홈페이지스쿨의 제작사례는 단순 템플릿 복사가 아닙니다. 각자의 사업과 목적에 맞게 기획하고, AI 도구를 활용해 구조를 잡고, 직접 수정하고 배포하는 방식으로 완성합니다.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:30px;">
+      
+      <div style="background:#fff;border:1px solid #e6e9f2;border-radius:14px;overflow:hidden;">
+        <div style="background:#16a34a;color:#fff;padding:18px 22px;">
+          <div style="font-size:14px;font-weight:800;opacity:0.9;margin-bottom:5px;">1단계</div>
+          <div style="font-size:20px;font-weight:800;line-height:1.4;">ChatGPT로 기획</div>
+        </div>
+        <div style="padding:20px 22px;display:flex;flex-direction:column;gap:9px;">
+          <div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#16a34a;font-weight:800;">·</span><span>사업 소개 정리</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#16a34a;font-weight:800;">·</span><span>고객 대상 분석</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#16a34a;font-weight:800;">·</span><span>사이트맵 작성</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#16a34a;font-weight:800;">·</span><span>카피 초안 작성</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#16a34a;font-weight:800;">·</span><span>이미지 방향 설정</span></div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #e6e9f2;border-radius:14px;overflow:hidden;">
+        <div style="background:#8b5cf6;color:#fff;padding:18px 22px;">
+          <div style="font-size:14px;font-weight:800;opacity:0.9;margin-bottom:5px;">2단계</div>
+          <div style="font-size:20px;font-weight:800;line-height:1.4;">Claude Design / Codex로 제작</div>
+        </div>
+        <div style="padding:20px 22px;display:flex;flex-direction:column;gap:9px;">
+          <div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#8b5cf6;font-weight:800;">·</span><span>메인페이지 제작</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#8b5cf6;font-weight:800;">·</span><span>서브페이지 구성</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#8b5cf6;font-weight:800;">·</span><span>반응형 점검</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#8b5cf6;font-weight:800;">·</span><span>버튼과 폼 연결</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#8b5cf6;font-weight:800;">·</span><span>디자인 수정</span></div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #e6e9f2;border-radius:14px;overflow:hidden;">
+        <div style="background:#2f6feb;color:#fff;padding:18px 22px;">
+          <div style="font-size:14px;font-weight:800;opacity:0.9;margin-bottom:5px;">3단계</div>
+          <div style="font-size:20px;font-weight:800;line-height:1.4;">GitHub / Vercel 배포</div>
+        </div>
+        <div style="padding:20px 22px;display:flex;flex-direction:column;gap:9px;">
+          <div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">·</span><span>저장소 세팅</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">·</span><span>Vercel 배포</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">·</span><span>URL 확인</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">·</span><span>커스텀 도메인 연결</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#2f6feb;font-weight:800;">·</span><span>OG 이미지와 파비콘 적용</span></div>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #e6e9f2;border-radius:14px;overflow:hidden;">
+        <div style="background:#e8873a;color:#fff;padding:18px 22px;">
+          <div style="font-size:14px;font-weight:800;opacity:0.9;margin-bottom:5px;">4단계</div>
+          <div style="font-size:20px;font-weight:800;line-height:1.4;">schemaWorks 점검</div>
+        </div>
+        <div style="padding:20px 22px;display:flex;flex-direction:column;gap:9px;">
+          <div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#e8873a;font-weight:800;">·</span><span>메타태그 확인</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#e8873a;font-weight:800;">·</span><span>헤딩 구조 점검</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#e8873a;font-weight:800;">·</span><span>구조화 데이터 확인</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#e8873a;font-weight:800;">·</span><span>sitemap.xml · robots.txt 점검</span></div><div style="display:flex;gap:9px;font-size:17px;line-height:1.6;color:#3b4258;"><span style="color:#e8873a;font-weight:800;">·</span><span>AIO 최적화 항목 개선</span></div>
+        </div>
+      </div>
+    </div>
+    <a href="/curriculum" style="display:inline-block;background:#12193a;color:#fff;font-weight:700;font-size:19px;padding:15px 26px;border-radius:10px;text-decoration:none;">4주 커리큘럼 보기 →</a></div>
+  </section>
+
+
+  <section class="pad" style="background:#ffffff;padding:72px 40px;">
+    <div style="max-width:1340px;margin:0 auto;"><div style="font-size:14px;font-weight:800;color:#2f6feb;letter-spacing:1.5px;margin-bottom:14px;">TYPES</div><h2 style="font-size:32px;font-weight:800;margin:0 0 16px;color:#14162b;line-height:1.42;">이런 홈페이지를 만들 수 있습니다</h2><p style="font-size:18px;line-height:1.85;color:#5b6478;margin:0 0 32px;max-width:880px;">AI홈페이지스쿨은 특정 업종만을 위한 과정이 아닙니다. 1인기업, 소상공인, 강사, 컨설턴트, 프리랜서, 마케터가 자신의 상황에 맞는 공식 홈페이지를 직접 만들 수 있도록 설계되어 있습니다.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;">
+      
+      <div style="background:#f8f9fc;border:1px solid #e6e9f2;border-radius:14px;padding:24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <div style="width:28px;height:28px;flex:none;border-radius:50%;background:#eaf1fe;color:#2f6feb;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">1</div>
+          <div style="font-size:19px;font-weight:800;color:#1a1f36;line-height:1.4;">1인기업 홈페이지</div>
+        </div>
+        <div style="font-size:17px;line-height:1.7;color:#5b6478;">서비스 소개, 대표자 브랜딩, 상담 CTA</div>
+      </div>
+      <div style="background:#f8f9fc;border:1px solid #e6e9f2;border-radius:14px;padding:24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <div style="width:28px;height:28px;flex:none;border-radius:50%;background:#eaf1fe;color:#2f6feb;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">2</div>
+          <div style="font-size:19px;font-weight:800;color:#1a1f36;line-height:1.4;">소상공인 매장 홈페이지</div>
+        </div>
+        <div style="font-size:17px;line-height:1.7;color:#5b6478;">매장 소개, 위치, 메뉴·서비스, 문의 연결</div>
+      </div>
+      <div style="background:#f8f9fc;border:1px solid #e6e9f2;border-radius:14px;padding:24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <div style="width:28px;height:28px;flex:none;border-radius:50%;background:#eaf1fe;color:#2f6feb;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">3</div>
+          <div style="font-size:19px;font-weight:800;color:#1a1f36;line-height:1.4;">강사·컨설턴트 홈페이지</div>
+        </div>
+        <div style="font-size:17px;line-height:1.7;color:#5b6478;">프로필, 강의 과정, 후기, 신청 버튼</div>
+      </div>
+      <div style="background:#f8f9fc;border:1px solid #e6e9f2;border-radius:14px;padding:24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <div style="width:28px;height:28px;flex:none;border-radius:50%;background:#eaf1fe;color:#2f6feb;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">4</div>
+          <div style="font-size:19px;font-weight:800;color:#1a1f36;line-height:1.4;">프리랜서 포트폴리오</div>
+        </div>
+        <div style="font-size:17px;line-height:1.7;color:#5b6478;">작업 사례, 서비스 범위, 문의 폼</div>
+      </div>
+      <div style="background:#f8f9fc;border:1px solid #e6e9f2;border-radius:14px;padding:24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <div style="width:28px;height:28px;flex:none;border-radius:50%;background:#eaf1fe;color:#2f6feb;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">5</div>
+          <div style="font-size:19px;font-weight:800;color:#1a1f36;line-height:1.4;">교육 과정 랜딩페이지</div>
+        </div>
+        <div style="font-size:17px;line-height:1.7;color:#5b6478;">커리큘럼, 가격, FAQ, 수강신청 CTA</div>
+      </div>
+      <div style="background:#f8f9fc;border:1px solid #e6e9f2;border-radius:14px;padding:24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <div style="width:28px;height:28px;flex:none;border-radius:50%;background:#eaf1fe;color:#2f6feb;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">6</div>
+          <div style="font-size:19px;font-weight:800;color:#1a1f36;line-height:1.4;">병원·전문 서비스 소개 페이지</div>
+        </div>
+        <div style="font-size:17px;line-height:1.7;color:#5b6478;">전문성, 진료·서비스 안내, 위치, 문의 흐름</div>
+      </div>
+      <div style="background:#f8f9fc;border:1px solid #e6e9f2;border-radius:14px;padding:24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <div style="width:28px;height:28px;flex:none;border-radius:50%;background:#eaf1fe;color:#2f6feb;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">7</div>
+          <div style="font-size:19px;font-weight:800;color:#1a1f36;line-height:1.4;">농산물·상품 상세 랜딩페이지</div>
+        </div>
+        <div style="font-size:17px;line-height:1.7;color:#5b6478;">상품 스토리, 장점, 후기, 구매·문의 연결</div>
+      </div>
+      <div style="background:#f8f9fc;border:1px solid #e6e9f2;border-radius:14px;padding:24px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <div style="width:28px;height:28px;flex:none;border-radius:50%;background:#eaf1fe;color:#2f6feb;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">8</div>
+          <div style="font-size:19px;font-weight:800;color:#1a1f36;line-height:1.4;">대행·컨설팅 서비스 페이지</div>
+        </div>
+        <div style="font-size:17px;line-height:1.7;color:#5b6478;">문제 제기, 해결 방식, 프로세스, 상담 신청</div>
+      </div>
+    </div></div>
+  </section>
+
+
+  <section class="pad" style="background:#eef2fb;padding:72px 40px;">
+    <div style="max-width:1340px;margin:0 auto;"><div style="font-size:14px;font-weight:800;color:#2f6feb;letter-spacing:1.5px;margin-bottom:14px;">CHANGE</div><h2 style="font-size:32px;font-weight:800;margin:0 0 16px;color:#14162b;line-height:1.42;">수업 전과 후,<br>가장 큰 차이는 '공식 링크'입니다</h2><div style="display:flex;gap:20px;flex-wrap:wrap;">
+      <div style="flex:1 1 380px;min-width:300px;background:#fff;border:1px solid #e6e9f2;border-radius:14px;padding:28px;" class="col">
+        <div style="display:inline-block;background:#f1f3f8;color:#8b93ab;font-size:15px;font-weight:800;padding:7px 16px;border-radius:20px;margin-bottom:18px;">수업 전</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;gap:10px;font-size:17px;line-height:1.65;color:#8b93ab;"><span style="font-weight:800;">✕</span><span>블로그와 SNS에 정보가 흩어져 있습니다.</span></div><div style="display:flex;gap:10px;font-size:17px;line-height:1.65;color:#8b93ab;"><span style="font-weight:800;">✕</span><span>고객에게 보낼 공식 링크가 없습니다.</span></div><div style="display:flex;gap:10px;font-size:17px;line-height:1.65;color:#8b93ab;"><span style="font-weight:800;">✕</span><span>서비스 소개가 매번 말로 설명됩니다.</span></div><div style="display:flex;gap:10px;font-size:17px;line-height:1.65;color:#8b93ab;"><span style="font-weight:800;">✕</span><span>홈페이지 제작과 배포가 막막합니다.</span></div><div style="display:flex;gap:10px;font-size:17px;line-height:1.65;color:#8b93ab;"><span style="font-weight:800;">✕</span><span>검색 등록과 도메인 연결이 어렵게 느껴집니다.</span></div><div style="display:flex;gap:10px;font-size:17px;line-height:1.65;color:#8b93ab;"><span style="font-weight:800;">✕</span><span>AI가 내 사업을 이해할 구조가 부족합니다.</span></div>
+        </div>
+      </div>
+      <div style="flex:1 1 380px;min-width:300px;background:#12193a;border-radius:14px;padding:28px;" class="col">
+        <div style="display:inline-block;background:#2f6feb;color:#fff;font-size:15px;font-weight:800;padding:7px 16px;border-radius:20px;margin-bottom:18px;">수업 후</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;gap:10px;font-size:17px;line-height:1.65;color:#e4e8f5;"><span style="color:#7ea6ff;font-weight:800;">✔</span><span>내 사업 공식 홈페이지가 생깁니다.</span></div><div style="display:flex;gap:10px;font-size:17px;line-height:1.65;color:#e4e8f5;"><span style="color:#7ea6ff;font-weight:800;">✔</span><span>서비스, 후기, 문의 CTA가 한곳에 정리됩니다.</span></div><div style="display:flex;gap:10px;font-size:17px;line-height:1.65;color:#e4e8f5;"><span style="color:#7ea6ff;font-weight:800;">✔</span><span>고객에게 보낼 수 있는 공식 URL이 생깁니다.</span></div><div style="display:flex;gap:10px;font-size:17px;line-height:1.65;color:#e4e8f5;"><span style="color:#7ea6ff;font-weight:800;">✔</span><span>GitHub와 Vercel로 직접 배포할 수 있습니다.</span></div><div style="display:flex;gap:10px;font-size:17px;line-height:1.65;color:#e4e8f5;"><span style="color:#7ea6ff;font-weight:800;">✔</span><span>도메인, OG 이미지, 검색 등록 흐름을 이해합니다.</span></div><div style="display:flex;gap:10px;font-size:17px;line-height:1.65;color:#e4e8f5;"><span style="color:#7ea6ff;font-weight:800;">✔</span><span>schemaWorks로 AIO 최적화 상태를 점검할 수 있습니다.</span></div><div style="display:flex;gap:10px;font-size:17px;line-height:1.65;color:#e4e8f5;"><span style="color:#7ea6ff;font-weight:800;">✔</span><span>이후에도 Claude와 Codex로 직접 수정할 수 있습니다.</span></div>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+
+  <section class="pad" style="background:#12193a;padding:72px 40px;">
+    <div style="max-width:1340px;margin:0 auto;"><div style="font-size:14px;font-weight:800;color:#7ea6ff;letter-spacing:1.5px;margin-bottom:14px;">ASSETS</div><h2 style="font-size:32px;font-weight:800;margin:0 0 16px;color:#fff;line-height:1.42;">4주 후, 이런 제작 자산이 남습니다</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;">
+      
+      <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:20px 22px;">
+        <div style="width:30px;height:30px;flex:none;border-radius:50%;background:#2f6feb;color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">1</div>
+        <div>
+          <div style="color:#fff;font-size:18px;font-weight:700;margin-bottom:5px;line-height:1.45;">홈페이지 기획안</div>
+          <div style="color:#a9b3ce;font-size:16px;line-height:1.65;">사이트맵, 카피, 브랜드 톤앤매너가 정리된 설계 문서</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:20px 22px;">
+        <div style="width:30px;height:30px;flex:none;border-radius:50%;background:#2f6feb;color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">2</div>
+        <div>
+          <div style="color:#fff;font-size:18px;font-weight:700;margin-bottom:5px;line-height:1.45;">ChatGPT 이미지 세트</div>
+          <div style="color:#a9b3ce;font-size:16px;line-height:1.65;">목업 이미지와 업종별 실사 이미지 세트</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:20px 22px;">
+        <div style="width:30px;height:30px;flex:none;border-radius:50%;background:#2f6feb;color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">3</div>
+        <div>
+          <div style="color:#fff;font-size:18px;font-weight:700;margin-bottom:5px;line-height:1.45;">반응형 멀티페이지 홈페이지</div>
+          <div style="color:#a9b3ce;font-size:16px;line-height:1.65;">Claude Design 또는 Codex로 제작한 실제 웹사이트</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:20px 22px;">
+        <div style="width:30px;height:30px;flex:none;border-radius:50%;background:#2f6feb;color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">4</div>
+        <div>
+          <div style="color:#fff;font-size:18px;font-weight:700;margin-bottom:5px;line-height:1.45;">GitHub 저장소</div>
+          <div style="color:#a9b3ce;font-size:16px;line-height:1.65;">수정 이력과 버전 관리가 가능한 코드 저장소</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:20px 22px;">
+        <div style="width:30px;height:30px;flex:none;border-radius:50%;background:#2f6feb;color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">5</div>
+        <div>
+          <div style="color:#fff;font-size:18px;font-weight:700;margin-bottom:5px;line-height:1.45;">Vercel 배포 URL</div>
+          <div style="color:#a9b3ce;font-size:16px;line-height:1.65;">외부에 공유할 수 있는 실서비스 주소</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:20px 22px;">
+        <div style="width:30px;height:30px;flex:none;border-radius:50%;background:#2f6feb;color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">6</div>
+        <div>
+          <div style="color:#fff;font-size:18px;font-weight:700;margin-bottom:5px;line-height:1.45;">커스텀 도메인</div>
+          <div style="color:#a9b3ce;font-size:16px;line-height:1.65;">내 사업 이름으로 연결된 공식 홈페이지 주소</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:20px 22px;">
+        <div style="width:30px;height:30px;flex:none;border-radius:50%;background:#2f6feb;color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">7</div>
+        <div>
+          <div style="color:#fff;font-size:18px;font-weight:700;margin-bottom:5px;line-height:1.45;">검색 등록 준비</div>
+          <div style="color:#a9b3ce;font-size:16px;line-height:1.65;">sitemap.xml, robots.txt, 네이버·구글 등록 흐름</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:20px 22px;">
+        <div style="width:30px;height:30px;flex:none;border-radius:50%;background:#2f6feb;color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">8</div>
+        <div>
+          <div style="color:#fff;font-size:18px;font-weight:700;margin-bottom:5px;line-height:1.45;">AIO 점검 결과</div>
+          <div style="color:#a9b3ce;font-size:16px;line-height:1.65;">schemaWorks를 활용한 구조, 메타, 헤딩, 구조화 데이터 점검</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:20px 22px;">
+        <div style="width:30px;height:30px;flex:none;border-radius:50%;background:#2f6feb;color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;">9</div>
+        <div>
+          <div style="color:#fff;font-size:18px;font-weight:700;margin-bottom:5px;line-height:1.45;">수정 프롬프트 라이브러리</div>
+          <div style="color:#a9b3ce;font-size:16px;line-height:1.65;">스스로 홈페이지를 수정하고 확장할 수 있는 프롬프트 모음</div>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+
+  <section class="pad" style="background:#ffffff;padding:72px 40px;">
+    <div style="max-width:1340px;margin:0 auto;"><h2 style="font-size:32px;font-weight:800;margin:0 0 16px;color:#14162b;line-height:1.42;">중요한 것은 완벽한 디자인보다<br>실제로 운영 가능한 홈페이지입니다</h2><p style="font-size:18px;line-height:1.85;color:#5b6478;margin:0 0 16px;max-width:880px;">AI홈페이지스쿨은 디자인만 예쁜 화면을 만드는 과정이 아닙니다. 내 사업을 설명하고, 고객에게 공유하고, 검색엔진에 등록하고, AI가 이해할 수 있도록 구조를 점검하는 실전형 홈페이지 제작 과정입니다.</p>
+    <p style="font-size:18px;line-height:1.85;color:#5b6478;margin:0;max-width:880px;">수강생 제작사례는 앞으로 계속 업데이트됩니다. 각자의 업종과 준비 자료에 따라 결과물은 달라질 수 있지만, 중요한 것은 내 사업의 공식 홈페이지를 직접 만들고 운영할 수 있는 경험을 갖는 것입니다.</p></div>
+  </section>
+
+  <section class="pad" style="background:#12193a;padding:72px 40px;border-top:1px solid #232a52;">
+    <div style="max-width:1340px;margin:0 auto;">
+      <h2 style="font-size:34px;font-weight:800;margin:0 0 20px;color:#fff;line-height:1.4;">다음 제작사례는<br>당신의 홈페이지가 될 수 있습니다</h2>
+      <p style="font-size:19px;line-height:1.85;color:#a9b3ce;margin:0 0 32px;max-width:840px;">AI홈페이지스쿨에서 내 사업의 공식 홈페이지를 직접 기획하고, 제작하고, 배포하고, AIO 최적화까지 점검해 보세요.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;" class="ctarow">
+        <a href="/apply" style="background:#2f6feb;color:#fff;font-weight:700;font-size:19px;padding:16px 28px;border-radius:10px;text-decoration:none;box-shadow:0 10px 22px rgba(47,111,235,0.35);">수강 신청하기 →</a>
+        <a href="/curriculum" style="background:transparent;color:#fff;font-weight:700;font-size:19px;padding:16px 28px;border-radius:10px;border:1px solid rgba(255,255,255,0.35);text-decoration:none;">4주 커리큘럼 보기</a>
+      </div>
+    </div>
+  </section>
+
+
+  <footer style="background:#0d1330;padding:48px 40px 40px;" class="pad">
+    <div style="max-width:1340px;margin:0 auto;">
+      <div style="display:flex;gap:40px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start;">
+        <div style="max-width:520px;">
+          <div style="color:#fff;font-weight:800;font-size:21px;margin-bottom:12px;">AI홈페이지스쿨</div>
+          <p style="color:#9aa4c4;font-size:16px;line-height:1.75;margin:0;">AI홈페이지스쿨은 1인기업과 소상공인이 AI를 활용해 자신의 공식 홈페이지를 직접 기획하고 제작하며, 배포와 AIO 최적화까지 경험하는 4주 실전 과정입니다.</p>
+        </div>
+        <nav style="display:grid;grid-template-columns:repeat(2,minmax(120px,auto));gap:10px 40px;">
+          <a href="/" style="color:#c7cee5;font-size:16px;text-decoration:none;padding:6px 0;display:inline-block;">홈</a>
+          <a href="/about" style="color:#c7cee5;font-size:16px;text-decoration:none;padding:6px 0;display:inline-block;">스쿨 소개</a>
+          <a href="/curriculum" style="color:#c7cee5;font-size:16px;text-decoration:none;padding:6px 0;display:inline-block;">4주 커리큘럼</a>
+          <a href="/aio" style="color:#c7cee5;font-size:16px;text-decoration:none;padding:6px 0;display:inline-block;">AIO 홈페이지</a>
+          <a href="/schemaworks" style="color:#c7cee5;font-size:16px;text-decoration:none;padding:6px 0;display:inline-block;">스키마웍스</a>
+          <a href="/examples" style="color:#c7cee5;font-size:16px;text-decoration:none;padding:6px 0;display:inline-block;">제작사례</a>
+          <a href="/apply" style="color:#c7cee5;font-size:16px;text-decoration:none;padding:6px 0;display:inline-block;">수강 안내</a>
+        </nav>
+      </div>
+      <div style="border-top:1px solid #232a52;margin-top:32px;padding-top:22px;">
+        <div style="color:#8b96b8;font-size:15px;line-height:1.7;">거상스쿨(주) | AI홈페이지스쿨 · AI 공식 홈페이지 4주 완성 과정<br>문의: 임헌수 대표 <span style="color:#7ea6ff;font-weight:700;">010-3422-8075</span> · 권현임 교육팀장 <span style="color:#7ea6ff;font-weight:700;">010-5795-8075</span> | 기업은행 <span style="color:#7ea6ff;font-weight:700;">667-045456-04-010</span></div>
+        <div style="color:#5c6690;font-size:14px;margin-top:12px;">© 2026 거상스쿨. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

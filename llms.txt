@@ -1,36 +1,29 @@
-# AI마케팅스쿨 - AI 홈페이지 제작 실전과정
+# AI홈페이지스쿨 - AI로 만드는 공식 홈페이지 4주 완성 과정
 
-AI마케팅스쿨은 ChatGPT, Claude, GitHub, Vercel을 활용해 2주 만에 실제 AI 홈페이지를 제작하고 배포하는 실전 교육 과정입니다.
+AI홈페이지스쿨은 1인기업, 소상공인, 강사, 컨설턴트, 마케터가 자신의 공식 홈페이지를 직접 기획하고 AI로 제작하며, GitHub와 Vercel로 배포하고, 도메인 연결과 OG 이미지 설정, 스키마웍스를 활용한 AIO 최적화 점검까지 경험하는 4주 실전 과정입니다.
 
-## 핵심 과정
-- AI 홈페이지 기획
-- Claude Design을 활용한 랜딩페이지 제작
-- GitHub 저장소 생성
-- Vercel 배포
-- 도메인 연결
-- SEO, GEO, AEO 기본 설정
-- Open Graph 이미지 설정
-- robots.txt, sitemap.xml, llms.txt 적용
-- schemaWorks 기반 SEO-GEO 진단 및 개선
+## 핵심 메시지
+AI 시대, 홈페이지는 단순한 온라인 명함이 아니라 AI가 우리 회사를 이해하는 공식 기준점입니다.
+
+## 페이지 구조
+- https://aihomepage-indol.vercel.app/ : 홈 (과정 개요와 신청)
+- https://aihomepage-indol.vercel.app/about : 스쿨 소개
+- https://aihomepage-indol.vercel.app/curriculum : 4주 커리큘럼
+- https://aihomepage-indol.vercel.app/aio : AIO 홈페이지
+- https://aihomepage-indol.vercel.app/schemaworks : 스키마웍스 AIO 최적화 점검
+- https://aihomepage-indol.vercel.app/examples : 제작사례
+- https://aihomepage-indol.vercel.app/apply : 수강신청
+
+## 4주 커리큘럼
+1주차: 홈페이지 기획과 AI 기본기
+2주차: 목업과 Claude Design 제작
+3주차: GitHub 저장, Vercel 배포, 도메인 연결
+4주차: OG 이미지, 스키마웍스 AIO 최적화 점검
 
 ## 과정 정보
-- 과정명: AI 홈페이지 제작 실전과정 (AI마케팅스쿨)
+- 과정명: AI홈페이지스쿨 4주 완성 과정
 - 운영: 거상스쿨(주)
-- 기간: 4시간 × 2주 (총 8시간)
-- 1기 수강료: 330,000원 (부가세 포함)
+- 기간: 주 1회 라이브 × 4주
+- 정가: 990,000원 / 8월 개강반 특별가: 550,000원 (부가세 별도)
+- 개강: 2026년 8월 중순 8월 개강반, 소수정예 10~20명 모집
 - 문의: 임헌수 대표 010-3422-8075, 권현임 교육팀장 010-5795-8075
-
-## 대상
-- 회사 홈페이지가 필요한 대표
-- 강의, 컨설팅, 랜딩페이지가 필요한 1인 사업자
-- AI로 제작과 배포를 직접 해보고 싶은 마케터
-- 외주 없이 빠르게 웹사이트를 만들고 싶은 소상공인
-
-## 페이지
-- [홈](https://aihomepage-indol.vercel.app/): 과정 소개, 5단계 제작 프로세스, SEO·GEO 진단 설명, 커리큘럼, 수강 사례, 수강료, FAQ
-
-## 대표 URL
-https://aihomepage-indol.vercel.app
-
-## 요약
-배우고 끝나는 수업이 아니라, 실제 AI 홈페이지가 남는 실전 과정입니다.
