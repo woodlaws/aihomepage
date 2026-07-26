@@ -4,7 +4,7 @@ AI 시대, 1인기업과 소상공인이 자신의 공식 홈페이지를 직접
 AIO 최적화 점검까지 경험하는 4주 실전 교육 브랜드의 공식 사이트입니다.
 
 - 운영: 거상스쿨(주) / 거상마케팅센터
-- 배포: https://aihomepage-indol.vercel.app
+- 배포: https://aihomepage-school.vercel.app
 
 ## 페이지 구조
 

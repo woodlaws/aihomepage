@@ -6,13 +6,13 @@ AI홈페이지스쿨은 1인기업, 소상공인, 강사, 컨설턴트, 마케�
 AI 시대, 홈페이지는 단순한 온라인 명함이 아니라 AI가 우리 회사를 이해하는 공식 기준점입니다.
 
 ## 페이지 구조
-- https://aihomepage-indol.vercel.app/ : 홈 (과정 개요와 신청)
-- https://aihomepage-indol.vercel.app/about : 스쿨 소개
-- https://aihomepage-indol.vercel.app/curriculum : 4주 커리큘럼
-- https://aihomepage-indol.vercel.app/aio : AIO 홈페이지
-- https://aihomepage-indol.vercel.app/schemaworks : 스키마웍스 AIO 최적화 점검
-- https://aihomepage-indol.vercel.app/examples : 제작사례
-- https://aihomepage-indol.vercel.app/apply : 수강신청
+- https://aihomepage-school.vercel.app/ : 홈 (과정 개요와 신청)
+- https://aihomepage-school.vercel.app/about : 스쿨 소개
+- https://aihomepage-school.vercel.app/curriculum : 4주 커리큘럼
+- https://aihomepage-school.vercel.app/aio : AIO 홈페이지
+- https://aihomepage-school.vercel.app/schemaworks : 스키마웍스 AIO 최적화 점검
+- https://aihomepage-school.vercel.app/examples : 제작사례
+- https://aihomepage-school.vercel.app/apply : 수강신청
 
 ## 4주 커리큘럼
 1주차: 홈페이지 기획과 AI 기본기
