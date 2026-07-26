@@ -178,7 +178,7 @@
         <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:24px;">
           <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;">
             <div style="display:flex;flex-direction:column;align-items:center;gap:7px;flex:1 1 0;">
-              <div style="width:60px;height:60px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;padding:5px;box-sizing:border-box;">
+              <div style="width:60px;height:60px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;padding:12px;box-sizing:border-box;">
                 <img src="assets/chatgpt.png" alt="ChatGPT로 기획·카피" style="width:100%;height:100%;object-fit:contain;">
               </div>
               <div style="font-size:17px;color:#c7cee5;font-weight:600;text-align:center;">기획·카피</div>
@@ -196,7 +196,7 @@
               <div style="font-size:17px;color:#c7cee5;font-weight:600;text-align:center;">저장</div>
             </div>
             <div style="display:flex;flex-direction:column;align-items:center;gap:7px;flex:1 1 0;">
-              <div style="width:60px;height:60px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;padding:5px;box-sizing:border-box;">
+              <div style="width:60px;height:60px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;padding:12px;box-sizing:border-box;">
                 <img src="assets/vercel.png" alt="Vercel로 배포" style="width:100%;height:100%;object-fit:contain;">
               </div>
               <div style="font-size:17px;color:#c7cee5;font-weight:600;text-align:center;">배포</div>
@@ -459,10 +459,10 @@
       <div style="font-size:17px;font-weight:800;color:#7ea6ff;letter-spacing:1.5px;margin-bottom:14px;">RESULT</div>
       <h2 style="font-size:38px;font-weight:800;margin:0 0 16px;color:#fff;">4주 후, 이런 결과물이 남습니다</h2>
       <p style="font-size:20px;line-height:1.8;color:#a9b3ce;margin:0 0 36px;max-width:800px;">
-        수업만 듣고 끝나는 과정이 아닙니다. 4주 후에는 실제로 공유할 수 있는 내 사업의 공식 홈페이지가 남아야 합니다.
+        수업만 듣고 끝나는 과정이 아닙니다. 홈페이지를 만들고 배포하고 도메인을 연결한 뒤, GA4로 방문자를 측정하고 schemaWorks로 SEO·GEO·AIO 상태까지 점검한 홈페이지가 남습니다.
       </p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-bottom:32px;">
-        <sc-for list="{{ outputs }}" as="o" hint-placeholder-count="8">
+        <sc-for list="{{ outputs }}" as="o" hint-placeholder-count="9">
           <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:12px;padding:26px 26px;">
             <div style="width:30px;height:30px;flex:none;border-radius:50%;background:#2f6feb;color:#fff;font-size:17px;font-weight:800;display:flex;align-items:center;justify-content:center;">{{ o.n }}</div>
             <div>
@@ -667,7 +667,7 @@
       <div style="font-size:17px;font-weight:800;color:#2f6feb;letter-spacing:1.5px;margin-bottom:14px;">FAQ</div>
       <h2 style="font-size:38px;font-weight:800;margin:0 0 32px;color:#14162b;">자주 묻는 질문</h2>
       <div style="display:flex;flex-direction:column;gap:10px;">
-        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="8">
           <div style="border:1px solid #e6e9f2;border-radius:12px;overflow:hidden;">
             <div onclick="{{ f.toggle }}" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;cursor:pointer;background:#f8f9fc;">
               <div style="font-size:20px;font-weight:700;color:#1a1f36;">{{ f.q }}</div>
@@ -799,14 +799,14 @@ class Component extends DCLogic {
         title: "실제 URL로 배포하고 AI와 검색엔진이 이해하는 구조로 최적화",
         desc: "완성된 홈페이지를 GitHub와 Vercel로 배포하고, 커스텀 도메인 연결과 필수 기술 파일, 스키마웍스 진단까지 진행합니다.",
         items: ["GitHub 저장소 만들기와 버전 관리", "Vercel 원클릭 배포와 HTTPS 확인", "커스텀 도메인 구매와 DNS 연결", "sitemap.xml, robots.txt, 개인정보처리방침 세팅", "Schema.org 구조화 데이터 적용", "메타태그, H1~H3, AI 크롤러 대응 점검", "schemaWorks 진단 기준 90점 이상을 목표로 점검·개선"],
-        output: "실서비스 URL, 커스텀 도메인, sitemap.xml, robots.txt, 개인정보처리방침, schemaWorks AIO 최적화 결과",
+        output: "실서비스 URL, 커스텀 도메인, sitemap.xml, robots.txt, 개인정보처리방침, GA4 설치, schemaWorks 1차 진단",
       },
       {
         week: "4주차", bg: "#e8873a", theme: "검색엔진 등록 & 브랜딩 & 자산화", tools: ["네이버 서치어드바이저", "구글 서치콘솔"],
         title: "사람과 AI 모두에게 발견되는 홈페이지로 완성",
         desc: "네이버와 구글에 홈페이지를 등록하고, SNS·블로그·명함·카드뉴스·기존 콘텐츠와 연결해 지속적으로 활용 가능한 브랜드 자산으로 만듭니다.",
         items: ["네이버 서치어드바이저 등록과 사이트맵 제출", "구글 서치콘솔 등록과 색인 요청", "네이버 스마트플레이스 연계", "인스타그램·블로그·스레드 프로필 링크 연결", "명함과 카드뉴스에 QR/URL 반영", "후기, 포트폴리오, 사업자정보, 연락처 강화", "내 홈페이지 전용 수정 프롬프트 라이브러리 만들기"],
-        output: "네이버·구글 등록 완료, 브랜딩 연결 구조, 수정 프롬프트 라이브러리, 유지보수 가능한 완성 홈페이지",
+        output: "네이버·구글 등록 완료, GA4 실시간 방문자 확인, schemaWorks 재진단과 항목 개선, 운영 가능한 완성 홈페이지",
       },
     ];
 
@@ -823,9 +823,10 @@ class Component extends DCLogic {
       { n: "3", title: "반응형 멀티페이지 웹사이트", desc: "Claude Design 또는 Codex로 제작한 실제 웹사이트" },
       { n: "4", title: "GitHub 저장소와 Vercel 배포 URL", desc: "수정과 배포가 가능한 실서비스 환경" },
       { n: "5", title: "커스텀 도메인 연결", desc: "내 사업 이름으로 연결된 공식 홈페이지 주소" },
-      { n: "6", title: "SEO·GEO·AIO 최적화 점검", desc: "schemaWorks를 활용한 구조, 메타, 헤딩, 구조화 데이터 점검" },
-      { n: "7", title: "네이버·구글 검색엔진 등록", desc: "네이버 서치어드바이저와 구글 서치콘솔 등록" },
-      { n: "8", title: "유지보수 프롬프트 라이브러리", desc: "스스로 홈페이지를 수정하고 확장할 수 있는 내 홈페이지 전용 프롬프트 모음" },
+      { n: "6", title: "GA4 설치", desc: "방문자 유입과 실시간 데이터를 확인할 수 있는 Google Analytics 연결" },
+      { n: "7", title: "schemaWorks 진단 리포트", desc: "SEO·GEO·AIO 기술 상태와 개선 항목이 정리된 진단 결과" },
+      { n: "8", title: "네이버·구글 검색엔진 등록", desc: "네이버 서치어드바이저와 구글 서치콘솔 등록" },
+      { n: "9", title: "유지보수 프롬프트 라이브러리", desc: "스스로 홈페이지를 수정하고 확장할 수 있는 내 홈페이지 전용 프롬프트 모음" },
     ];
 
     const cases = [
@@ -858,7 +859,9 @@ class Component extends DCLogic {
       { q: "수업 시간 외에 과제가 있나요?", a: "네. 4주 과정 동안 자신의 사업 소개 자료, 이미지, 카피, 도메인 정보, 검색 등록 자료 등을 준비해야 합니다. 수업 시간만으로 끝나는 과정이 아니라 실제 홈페이지 완성을 목표로 하는 실습형 과정입니다." },
       { q: "도메인 연결까지 직접 하나요?", a: "네. Vercel 배포 후 커스텀 도메인 연결 방법을 실습합니다. 도메인 구매처와 DNS 설정은 개인별 상황에 따라 다를 수 있습니다." },
       { q: "검색엔진 등록도 배우나요?", a: "네. 네이버 서치어드바이저와 구글 서치콘솔 등록, sitemap.xml 제출, 색인 요청까지 다룹니다." },
-      { q: "schemaWorks 점수는 보장되나요?", a: "점수를 보장하지는 않습니다. 다만 schemaWorks 진단 기준 90점 이상을 목표로 홈페이지 구조, 메타태그, 헤딩, 구조화 데이터, AIO 최적화 항목을 점검하고 개선합니다." },
+      { q: "GA4도 수업에서 다루나요?", a: "네. 홈페이지를 배포한 뒤 GA4를 설치해 방문자 데이터와 실시간 유입을 확인하는 흐름을 다룹니다. 단순히 홈페이지를 만드는 데서 끝나지 않고, 실제 운영과 측정이 가능한 상태까지 연결하는 것이 목표입니다." },
+      { q: "schemaWorks 점수를 보장하나요?", a: "특정 점수를 보장하지는 않습니다. 사이트 상태, 준비 자료, 도메인, 기술 환경에 따라 결과는 달라질 수 있습니다. 다만 수업에서는 schemaWorks 진단 기준을 바탕으로 SEO·GEO·AIO 최적화 항목을 이해하고, 부족한 부분을 직접 개선하는 방법을 실습합니다." },
+      { q: "홈페이지를 만든 뒤에도 수정할 수 있나요?", a: "네. GitHub, Vercel, Claude, Codex를 활용해 수업 이후에도 스스로 문구, 이미지, 페이지, 기술 항목을 수정할 수 있도록 유지보수 흐름을 함께 다룹니다." },
     ];
     const faqs = faqData.map((f, i) => ({
       ...f,
