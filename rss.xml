@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>AI홈페이지스쿨</title>
+    <link>https://aihomepage-school.vercel.app/</link>
+    <description>AI 검색 시대를 위한 실전 홈페이지 제작 교육</description>
+    <language>ko-KR</language>
+
+    <item>
+      <title>AI홈페이지스쿨</title>
+      <link>https://aihomepage-school.vercel.app/</link>
+      <description>AI 검색에 노출되는 홈페이지를 직접 제작하는 실전 과정입니다.</description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://aihomepage-school.vercel.app/</guid>
+    </item>
+
+    <item>
+      <title>과정 소개</title>
+      <link>https://aihomepage-school.vercel.app/about</link>
+      <description>AI홈페이지스쿨의 교육 목표와 특징을 안내합니다.</description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://aihomepage-school.vercel.app/about</guid>
+    </item>
+
+    <item>
+      <title>교육 커리큘럼</title>
+      <link>https://aihomepage-school.vercel.app/curriculum</link>
+      <description>기획부터 제작, 배포와 검색 등록까지 배우는 커리큘럼입니다.</description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://aihomepage-school.vercel.app/curriculum</guid>
+    </item>
+
+    <item>
+      <title>AI 검색 최적화</title>
+      <link>https://aihomepage-school.vercel.app/aio</link>
+      <description>AIO·AEO·GEO 검색 최적화 전략을 소개합니다.</description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://aihomepage-school.vercel.app/aio</guid>
+    </item>
+
+    <item>
+      <title>스키마웍스</title>
+      <link>https://aihomepage-school.vercel.app/schemaworks</link>
+      <description>AI와 검색엔진을 위한 구조화 데이터 활용법입니다.</description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://aihomepage-school.vercel.app/schemaworks</guid>
+    </item>
+
+    <item>
+      <title>AI 홈페이지 제작 사례</title>
+      <link>https://aihomepage-school.vercel.app/examples</link>
+      <description>AI 도구로 제작한 홈페이지 사례를 확인할 수 있습니다.</description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://aihomepage-school.vercel.app/examples</guid>
+    </item>
+
+    <item>
+      <title>수강 신청</title>
+      <link>https://aihomepage-school.vercel.app/apply</link>
+      <description>AI홈페이지스쿨 신청 방법을 안내합니다.</description>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0900</pubDate>
+      <guid>https://aihomepage-school.vercel.app/apply</guid>
+    </item>
+  </channel>
+</rss>
