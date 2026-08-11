@@ -98,4 +98,4 @@ Vercel 프로젝트 → Settings → Domains → 도메인 입력 → 안내되�
 
 - GA4 측정 ID 발급 시 전 페이지 `<head>`에 삽입
 - `/apply` 신청 버튼: 현재 `#apply-form` 앵커 → 구글폼 주소로 교체
-- `/examples` 제작사례 4건: 8월 기수 수료 후 실제 캡처·URL로 교체
+- `/examples` 제작사례 6건: 신규 수료 사례가 생길 때 실제 캡처·URL로 업데이트
