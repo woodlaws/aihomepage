@@ -79,7 +79,26 @@
         "price": "550000",
         "priceCurrency": "KRW",
         "availability": "https://schema.org/PreOrder",
-        "url": "https://aihomepage-school.vercel.app/apply"
+        "url": "https://aihomepage-school.vercel.app/apply#apply-form"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "name": "AI홈페이지스쿨 2026년 8월 개강반",
+        "courseMode": "online",
+        "courseWorkload": "PT12H",
+        "startDate": "2026-08-25T20:00:00+09:00",
+        "endDate": "2026-09-15T23:00:00+09:00",
+        "eventSchedule": {
+          "@type": "Schedule",
+          "startDate": "2026-08-25",
+          "endDate": "2026-09-15",
+          "startTime": "20:00:00",
+          "endTime": "23:00:00",
+          "scheduleTimezone": "Asia/Seoul",
+          "repeatFrequency": "P1W",
+          "repeatCount": 4,
+          "byDay": "https://schema.org/Tuesday"
+        }
       }
     }
   ]
@@ -554,7 +573,8 @@
             <span style="color:#fff;font-size:24px;font-weight:700;">원</span>
           </div>
           <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:26px;">
-            <div style="color:#c7cee5;font-size:18px;line-height:1.6;">· 2026년 8월 중순 개강 예정</div>
+            <div style="color:#c7cee5;font-size:18px;line-height:1.6;">· 2026년 8월 25일 화요일 개강</div>
+            <div style="color:#c7cee5;font-size:18px;line-height:1.6;">· 매주 화요일 오후 8시~11시</div>
             <div style="color:#c7cee5;font-size:18px;line-height:1.6;">· 소수정예 10~20명 모집</div>
             <div style="color:#c7cee5;font-size:18px;line-height:1.6;">· 이후 기수부터 수강료는 조정될 수 있습니다</div>
           </div>
@@ -737,7 +757,7 @@ class Component extends DCLogic {
 
     const heroBadges = [
       "4주 완성 과정", "3시간 × 4회 · 총 12시간", "AI 기획 · 목업 · 제작", "GitHub / Vercel 배포",
-      "도메인 연결 실습", "스키마웍스 AIO 점검", "2026년 8월 중순 개강 예정", "소수정예 10~20명 모집",
+      "도메인 연결 실습", "스키마웍스 AIO 점검", "2026년 8월 25일 화요일 개강", "매주 화요일 오후 8시~11시",
     ];
 
     const heroFlow = [
