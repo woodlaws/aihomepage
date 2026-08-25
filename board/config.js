@@ -7,7 +7,7 @@ export const SUPABASE_URL = 'https://edvttdecrjmjpctqadvm.supabase.co';
 
 // Supabase 대시보드 → Project Settings → API Keys → Publishable key
 // sb_publishable_ 로 시작하는 값을 그대로 붙여넣으세요.
-export const SUPABASE_KEY = '여기에_sb_publishable_키를_붙여넣으세요';
+export const SUPABASE_KEY = 'sb_publishable_Dhij1WoCM3z1lQ8UrzuDvA_lbW7b5Yz';
 
 // 한 페이지에 보여줄 글 개수
 export const PAGE_SIZE = 10;
