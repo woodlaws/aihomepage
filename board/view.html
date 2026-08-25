@@ -7,16 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="./style.css">
-</head><!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>문의 상세 | AI홈페이지스쿨</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/board/style.css">
 </head>
 <body>
@@ -113,116 +103,6 @@ async function load() {
 
   document.title = `${data.title} | AI홈페이지스쿨`;
 
-  const key = `bd_viewed_${id}`;
-  const last = Number(localStorage.getItem(key) || 0);
-  if (Date.now() - last > 86400000) {
-    try {
-      await sb.rpc('increment_view', { row_id: id });
-      localStorage.setItem(key, String(Date.now()));
-    } catch (e) {
-      console.warn('조회수 증가 실패', e);
-    }
-  }
-}
-</script>
-
-</body>
-</html>
-<body>
-
-<header class="bd-header">
-  <div class="bd-header-in">
-    <a class="bd-logo" href="/">AI홈페이지<span>스쿨</span></a>
-    <nav class="bd-nav">
-      <a href="/curriculum/">커리큘럼</a>
-      <a href="/aio/">AIO</a>
-      <a href="/schemaworks/">스키마웍스</a>
-      <a href="/examples/">제작사례</a>
-      <a href="/board/">고객게시판</a>
-    </nav>
-    <a class="bd-cta" href="/apply/">수강 신청하기</a>
-  </div>
-</header>
-
-<section class="bd-hero">
-  <h1>고객게시판</h1>
-  <p>고객만족을 실천하는 AI홈페이지스쿨입니다.</p>
-</section>
-
-<main class="bd-wrap">
-
-  <article class="bd-view" id="view">
-    <div class="bd-loading">불러오는 중…</div>
-  </article>
-
-  <div class="bd-actions">
-    <a class="bd-btn bd-btn-ghost" href="./index.html">목록으로</a>
-    <a class="bd-btn bd-btn-primary" href="./write.html">문의하기</a>
-  </div>
-
-</main>
-
-<footer class="bd-footer">
-  <div><b>AI홈페이지스쿨</b> · 거상스쿨</div>
-  <div>문의 010-3422-8075 · 010-5795-8075</div>
-  <div>© 2026 AI홈페이지스쿨. All rights reserved.</div>
-</footer>
-
-<script type="module">
-import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
-import { SUPABASE_URL, SUPABASE_KEY, maskName, formatDate, esc } from './config.js';
-
-const sb = createClient(SUPABASE_URL, SUPABASE_KEY);
-const view = document.getElementById('view');
-
-const id = Number(new URLSearchParams(location.search).get('id'));
-
-if (!Number.isFinite(id) || id <= 0) {
-  view.innerHTML = '<div class="bd-loading">잘못된 접근입니다.</div>';
-} else {
-  load();
-}
-
-async function load() {
-  const { data, error } = await sb
-    .from('posts')
-    .select('id, title, content, author_name, is_notice, view_count, created_at, replies(id, content, created_at)')
-    .eq('id', id)
-    .single();
-
-  if (error || !data) {
-    console.error(error);
-    view.innerHTML = '<div class="bd-loading">글을 찾을 수 없습니다.</div>';
-    return;
-  }
-
-  const replies = (data.replies || []).sort(
-    (a, b) => new Date(a.created_at) - new Date(b.created_at)
-  );
-
-  const badge = data.is_notice ? '<span class="bd-badge">공지</span>' : '';
-
-  view.innerHTML = `
-    <div class="bd-view-head">
-      <h2>${badge}${esc(data.title)}</h2>
-      <div class="bd-view-meta">
-        <span>작성자 ${esc(maskName(data.author_name))}</span>
-        <span>${formatDate(data.created_at)}</span>
-        <span>조회 ${(data.view_count ?? 0) + 1}</span>
-      </div>
-    </div>
-    <div class="bd-view-body">${esc(data.content)}</div>
-    ${replies.map((r) => `
-      <div class="bd-reply">
-        <div class="bd-reply-head">관리자 답변 · ${formatDate(r.created_at)}</div>
-        <div class="bd-reply-body">${esc(r.content)}</div>
-      </div>
-    `).join('')}
-  `;
-
-  document.title = `${data.title} | AI홈페이지스쿨`;
-
-  // 조회수 증가 (같은 브라우저에서 24시간 내 중복 카운트 방지)
   const key = `bd_viewed_${id}`;
   const last = Number(localStorage.getItem(key) || 0);
   if (Date.now() - last > 86400000) {
