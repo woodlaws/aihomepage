@@ -8,7 +8,140 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style.css"><!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>문의 작성 | AI홈페이지스쿨</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/board/style.css">
+</head>
+<body>
+
+<header class="bd-header">
+  <div class="bd-header-in">
+    <a class="bd-logo" href="/">AI홈페이지<span>스쿨</span></a>
+    <nav class="bd-nav">
+      <a href="/curriculum/">커리큘럼</a>
+      <a href="/aio/">AIO</a>
+      <a href="/schemaworks/">스키마웍스</a>
+      <a href="/examples/">제작사례</a>
+      <a href="/board">고객게시판</a>
+    </nav>
+    <a class="bd-cta" href="/apply/">수강 신청하기</a>
+  </div>
+</header>
+
+<section class="bd-hero">
+  <h1>문의 작성</h1>
+  <p>남겨주신 내용은 확인 후 게시판에 답변드립니다.</p>
+</section>
+
+<main class="bd-wrap">
+
+  <div class="bd-msg" id="msg"></div>
+
+  <form class="bd-form" id="form" autocomplete="off">
+
+    <div class="bd-field">
+      <label for="author">작성자</label>
+      <input type="text" id="author" name="author" maxlength="20" required placeholder="성함을 입력해주세요">
+      <div class="bd-hint">게시판에는 첫 글자만 표시됩니다. (예: 임헌수 → 임**)</div>
+    </div>
+
+    <div class="bd-field">
+      <label for="title">제목</label>
+      <input type="text" id="title" name="title" maxlength="100" required placeholder="문의 제목을 입력해주세요">
+    </div>
+
+    <div class="bd-field">
+      <label for="content">내용</label>
+      <textarea id="content" name="content" maxlength="5000" required placeholder="궁금하신 내용을 자세히 적어주세요."></textarea>
+      <div class="bd-hint">개인정보(주민번호, 카드번호 등)는 입력하지 마세요.</div>
+    </div>
+
+    <input class="bd-hp" type="text" name="website" id="website" tabindex="-1" aria-hidden="true">
+
+    <div class="bd-actions">
+      <a class="bd-btn bd-btn-ghost" href="/board">취소</a>
+      <button class="bd-btn bd-btn-primary" type="submit" id="submitBtn">등록하기</button>
+    </div>
+
+  </form>
+
+</main>
+
+<footer class="bd-footer">
+  <div><b>AI홈페이지스쿨</b> · 거상스쿨</div>
+  <div>문의 010-3422-8075 · 010-5795-8075</div>
+  <div>© 2026 AI홈페이지스쿨. All rights reserved.</div>
+</footer>
+
+<script type="module">
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+import { SUPABASE_URL, SUPABASE_KEY } from '/board/config.js';
+
+const sb = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+const form      = document.getElementById('form');
+const msg       = document.getElementById('msg');
+const submitBtn = document.getElementById('submitBtn');
+
+const openedAt = Date.now();
+
+function showMsg(text, type) {
+  msg.textContent = text;
+  msg.className = `bd-msg show ${type}`;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const author  = document.getElementById('author').value.trim();
+  const title   = document.getElementById('title').value.trim();
+  const content = document.getElementById('content').value.trim();
+  const honey   = document.getElementById('website').value;
+
+  if (honey) return;
+
+  if (Date.now() - openedAt < 3000) {
+    showMsg('잠시 후 다시 시도해주세요.', 'error');
+    return;
+  }
+
+  if (author.length < 2)  { showMsg('작성자명을 2자 이상 입력해주세요.', 'error'); return; }
+  if (title.length  < 2)  { showMsg('제목을 2자 이상 입력해주세요.', 'error'); return; }
+  if (content.length < 5) { showMsg('내용을 5자 이상 입력해주세요.', 'error'); return; }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = '등록 중…';
+
+  const { error } = await sb.from('posts').insert({
+    title,
+    content,
+    author_name: author,
+  });
+
+  if (error) {
+    console.error(error);
+    showMsg(`등록에 실패했습니다. 잠시 후 다시 시도해주세요. (${error.message})`, 'error');
+    submitBtn.disabled = false;
+    submitBtn.textContent = '등록하기';
+    return;
+  }
+
+  showMsg('문의가 등록되었습니다. 목록으로 이동합니다.', 'success');
+  setTimeout(() => { location.href = '/board'; }, 900);
+});
+</script>
+
+</body>
+</html>
 </head>
 <body>
 
