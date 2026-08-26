@@ -7,24 +7,44 @@
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap">
 <link rel="stylesheet" href="/board/style.css">
 </head>
 <body>
 
-<header class="bd-header">
-  <div class="bd-header-in">
-    <a class="bd-logo" href="/">AI홈페이지<span>스쿨</span></a>
-    <nav class="bd-nav">
-      <a href="/curriculum/">커리큘럼</a>
-      <a href="/aio/">AIO</a>
-      <a href="/schemaworks/">스키마웍스</a>
-      <a href="/examples/">제작사례</a>
-      <a href="/board">고객게시판</a>
-    </nav>
-    <a class="bd-cta" href="/apply/">수강 신청하기</a>
-  </div>
-</header>
+<header style="position:fixed;top:0;left:0;right:0;z-index:50;background:#fff;border-bottom:1px solid #ececf2;min-height:94px;">
+    <div style="max-width:1340px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 40px;gap:20px;" class="hdr">
+      <a href="/" style="display:flex;align-items:center;gap:8px;color:#14162b;font-weight:800;font-size:28px;letter-spacing:-0.3px;white-space:nowrap;text-decoration:none;">
+        <img src="/assets/logo.png" alt="AI홈페이지스쿨" style="height:32px;width:auto;display:block;">AI홈페이지스쿨
+      </a>
+      <nav class="dnav" style="display:flex;align-items:center;gap:16px;">
+        <a href="/about" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">스쿨 소개</a>
+        <a href="/curriculum" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">4주 커리큘럼</a>
+        <a href="/aio" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">AEO·GEO 대비</a>
+        <a href="/schemaworks" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">스키마웍스</a>
+        <a href="/examples" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">제작사례</a>
+        <a href="/board" style="color:#2f6feb;font-size:23px;font-weight:700;white-space:nowrap;text-decoration:none;" aria-current="page">고객게시판</a>
+        <a href="/apply" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">수강 안내</a>
+        <a href="/apply" style="background:#2f6feb;color:#fff;font-size:23px;font-weight:700;padding:16px 24px;border-radius:8px;white-space:nowrap;text-decoration:none;">수강 신청하기</a>
+      </nav>
+      <div class="burger" onclick="document.getElementById('mnav').style.display=document.getElementById('mnav').style.display==='flex'?'none':'flex'" style="display:none;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px;cursor:pointer;">
+        <div style="width:24px;height:2px;background:#14162b;border-radius:2px;"></div>
+        <div style="width:24px;height:2px;background:#14162b;border-radius:2px;"></div>
+        <div style="width:24px;height:2px;background:#14162b;border-radius:2px;"></div>
+      </div>
+    </div>
+    <div id="mnav" style="display:none;flex-direction:column;background:#fff;border-top:1px solid #ececf2;padding:12px 20px 20px;gap:2px;">
+      <a href="/about" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">스쿨 소개</a>
+      <a href="/curriculum" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">4주 커리큘럼</a>
+      <a href="/aio" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">AEO·GEO 대비</a>
+      <a href="/schemaworks" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">스키마웍스</a>
+      <a href="/examples" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">제작사례</a>
+      <a href="/board" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">고객게시판</a>
+      <a href="/apply" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">수강 안내</a>
+      <a href="/apply" style="background:#2f6feb;color:#fff;font-size:23px;font-weight:700;padding:19px 24px;border-radius:8px;text-align:center;margin-top:10px;text-decoration:none;">수강 신청하기</a>
+    </div>
+  </header>
+  <div data-spacer style="height:94px;"></div>
 
 <section class="bd-hero">
   <h1>문의 작성</h1>
@@ -65,11 +85,15 @@
 
 </main>
 
-<footer class="bd-footer">
-  <div><b>AI홈페이지스쿨</b> · 거상스쿨</div>
-  <div>문의 010-3422-8075 · 010-5795-8075</div>
-  <div>© 2026 AI홈페이지스쿨. All rights reserved.</div>
-</footer>
+<footer class="pad" style="background:#0d1330;padding:56px 40px 40px;">
+    <div style="max-width:1340px;margin:0 auto;">
+      <div style="color:#8b96b8;font-size:18px;line-height:1.75;">
+          거상스쿨(주) | AI홈페이지스쿨 · AI 공식 홈페이지 4주 완성 과정<br>
+          문의: 임헌수 대표 <span style="color:#7ea6ff;font-weight:700;">010-3422-8075</span> · 권현임 교육팀장 <span style="color:#7ea6ff;font-weight:700;">010-5795-8075</span> | 기업은행 <span style="color:#7ea6ff;font-weight:700;">667-045456-04-010</span>
+        </div>
+      <div style="color:#5c6690;font-size:17px;margin-top:22px;">© 2026 거상스쿨. All rights reserved.</div>
+    </div>
+  </footer>
 
 <script type="module">
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
