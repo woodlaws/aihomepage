@@ -41,6 +41,9 @@
   body{margin:0;font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;background:#f5f7fb;color:#14162b;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
   a{color:#2f6feb;} a:hover{color:#1d54c4;}
   h1,h2,h3,p{word-break:keep-all;text-wrap:pretty;}
+  /* 메인 index.html 에는 box-sizing 리셋이 없어 헤더 안쪽 폭이 max-width+padding 으로 잡힌다.
+     고객게시판 메뉴가 늘어나면서 메뉴가 밀리므로, 헤더 줄에서만 되돌려 메인과 폭을 맞춘다. */
+  .hdr{box-sizing:content-box;}
   @media (max-width: 1400px){
     [data-spacer]{height:70px!important;}
     header{min-height:70px!important;}
@@ -76,6 +79,7 @@
         <a href="/aio" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">AEO·GEO 대비</a>
         <a href="/schemaworks" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">스키마웍스</a>
         <a href="/examples" style="color:#2f6feb;font-size:23px;font-weight:700;white-space:nowrap;text-decoration:none;">제작사례</a>
+        <a href="/board" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">고객게시판</a>
         <a href="/apply" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">수강 안내</a>
         <a href="/apply" style="background:#2f6feb;color:#fff;font-size:23px;font-weight:700;padding:16px 24px;border-radius:8px;white-space:nowrap;text-decoration:none;">수강 신청하기</a>
       </nav>
@@ -91,6 +95,7 @@
       <a href="/aio" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">AEO·GEO 대비</a>
       <a href="/schemaworks" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">스키마웍스</a>
       <a href="/examples" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">제작사례</a>
+      <a href="/board" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">고객게시판</a>
       <a href="/apply" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">수강 안내</a>
       <a href="/apply" style="background:#2f6feb;color:#fff;font-size:23px;font-weight:700;padding:19px 24px;border-radius:8px;text-align:center;margin-top:10px;text-decoration:none;">수강 신청하기</a>
     </div>
