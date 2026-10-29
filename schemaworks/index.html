@@ -44,6 +44,8 @@
   /* 메인 index.html 에는 box-sizing 리셋이 없어 헤더 안쪽 폭이 max-width+padding 으로 잡힌다.
      헤더 줄에서만 되돌려 메인과 폭을 맞춘다. */
   .hdr{box-sizing:content-box;}
+  .dnav a:nth-child(2){display:inline-block;width:126px;}
+  .dnav a:nth-child(3){display:inline-block;width:151px;}
   @media (max-width: 1400px){
     [data-spacer]{height:70px!important;}
     header{min-height:70px!important;}
@@ -73,28 +75,28 @@
       <a href="/" style="display:flex;align-items:center;gap:8px;color:#14162b;font-weight:800;font-size:28px;letter-spacing:-0.3px;white-space:nowrap;text-decoration:none;">
         <img src="../assets/logo.png" alt="AI홈페이지스쿨" style="height:32px;width:auto;display:block;">AI홈페이지스쿨
       </a>
-      <nav class="dnav" style="display:flex;align-items:center;gap:16px;">
+      <nav class="dnav" aria-label="주요 메뉴" style="display:flex;align-items:center;gap:16px;">
         <a href="/about" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">스쿨 소개</a>
         <a href="/curriculum" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">6주 커리큘럼</a>
         <a href="/aio" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">AEO·GEO 대비</a>
-        <a href="/schemaworks" style="color:#2f6feb;font-size:23px;font-weight:700;white-space:nowrap;text-decoration:none;">스키마웍스</a>
+        <a href="/schemaworks" aria-current="page" style="color:#2f6feb;font-size:23px;font-weight:700;white-space:nowrap;text-decoration:none;">스키마웍스</a>
         <a href="/examples" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">제작사례</a>
         <a href="/apply" style="color:#3b4258;font-size:23px;font-weight:500;white-space:nowrap;text-decoration:none;">수강 안내</a>
       </nav>
-      <div class="burger" onclick="document.getElementById('mnav').style.display=document.getElementById('mnav').style.display==='flex'?'none':'flex'" style="display:none;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px;cursor:pointer;">
-        <div style="width:24px;height:2px;background:#14162b;border-radius:2px;"></div>
-        <div style="width:24px;height:2px;background:#14162b;border-radius:2px;"></div>
-        <div style="width:24px;height:2px;background:#14162b;border-radius:2px;"></div>
-      </div>
+      <button class="burger" type="button" aria-label="모바일 메뉴 열기" aria-expanded="false" aria-controls="mnav" style="display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;border:0;background:transparent;cursor:pointer;">
+        <span style="width:24px;height:2px;background:#14162b;border-radius:2px;"></span>
+        <span style="width:24px;height:2px;background:#14162b;border-radius:2px;"></span>
+        <span style="width:24px;height:2px;background:#14162b;border-radius:2px;"></span>
+      </button>
     </div>
-    <div id="mnav" style="display:none;flex-direction:column;background:#fff;border-top:1px solid #ececf2;padding:12px 20px 20px;gap:2px;">
-      <a href="/about" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">스쿨 소개</a>
-      <a href="/curriculum" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">6주 커리큘럼</a>
-      <a href="/aio" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">AEO·GEO 대비</a>
-      <a href="/schemaworks" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">스키마웍스</a>
-      <a href="/examples" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">제작사례</a>
-      <a href="/apply" style="color:#3b4258;font-size:23px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">수강 안내</a>
-    </div>
+    <nav id="mnav" aria-label="모바일 메뉴" style="display:none;flex-direction:column;background:#fff;border-top:1px solid #ececf2;padding:12px 20px 20px;gap:2px;">
+      <a href="/about" style="color:#3b4258;font-size:21px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">스쿨 소개</a>
+      <a href="/curriculum" style="color:#3b4258;font-size:21px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">6주 커리큘럼</a>
+      <a href="/aio" style="color:#3b4258;font-size:21px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">AEO·GEO 대비</a>
+      <a href="/schemaworks" aria-current="page" style="color:#2f6feb;font-size:21px;font-weight:700;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">스키마웍스</a>
+      <a href="/examples" style="color:#3b4258;font-size:21px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">제작사례</a>
+      <a href="/apply" style="color:#3b4258;font-size:21px;font-weight:600;padding:12px 4px;border-bottom:1px solid #f1f2f6;text-decoration:none;">수강 안내</a>
+    </nav>
   </header>
   <div data-spacer style="height:94px;"></div>
 
@@ -397,5 +399,6 @@
       </div>
     </div>
   </footer>
+  <script>const burger=document.querySelector('.burger'),mobileNav=document.getElementById('mnav');burger.addEventListener('click',()=>{const open=burger.getAttribute('aria-expanded')==='true';burger.setAttribute('aria-expanded',String(!open));burger.setAttribute('aria-label',open?'모바일 메뉴 열기':'모바일 메뉴 닫기');mobileNav.style.display=open?'none':'flex'});</script>
 </body>
 </html>
