@@ -1,30 +1,38 @@
-# AI홈페이지스쿨 - AI로 만드는 공식 홈페이지 4주 완성 과정
+# AI홈페이지스쿨 - 홈페이지부터 광고·고객 관리까지 6주 실전과정
 
-AI홈페이지스쿨은 1인기업, 소상공인, 강사, 컨설턴트, 마케터가 자신의 공식 홈페이지를 직접 기획하고 AI로 제작하며, GitHub와 Vercel로 배포하고, 도메인 연결과 OG 이미지 설정, 스키마웍스를 활용한 AIO 최적화 점검까지 경험하는 4주 실전 과정입니다.
+AI홈페이지스쿨은 ChatGPT와 Claude Code로 사업 홈페이지를 제작하고, 배포·콘텐츠 운영·문의 수집·검색 등록·메타 광고·고객 관리까지 연결하는 실전 교육 과정입니다.
 
-## 핵심 메시지
-AI 시대, 홈페이지는 단순한 온라인 명함이 아니라 AI가 우리 회사를 이해하는 공식 기준점입니다.
-
-## 페이지 구조
-- https://aihomepage-school.vercel.app/ : 홈 (과정 개요와 신청)
+## 주요 페이지
+- https://aihomepage-school.vercel.app/ : 공식 홈페이지
 - https://aihomepage-school.vercel.app/about : 스쿨 소개
-- https://aihomepage-school.vercel.app/curriculum : 4주 커리큘럼
-- https://aihomepage-school.vercel.app/aio : AIO 홈페이지
-- https://aihomepage-school.vercel.app/schemaworks : 스키마웍스 AIO 최적화 점검
-- https://aihomepage-school.vercel.app/examples : 제작사례
-- https://aihomepage-school.vercel.app/apply : 수강신청
+- https://aihomepage-school.vercel.app/curriculum : 6주 커리큘럼
+- https://aihomepage-school.vercel.app/examples : 제작 사례
+- https://aihomepage-school.vercel.app/apply : 수강 안내 및 신청
 
-## 4주 커리큘럼
-1주차: 홈페이지 기획과 AI 기본기
-2주차: 목업과 Claude Design 제작
-3주차: GitHub 저장, Vercel 배포, 도메인 연결
-4주차: OG 이미지, 스키마웍스 AIO 최적화 점검
+## 6주 커리큘럼
+1주차: 기획부터 제작까지 — 내 사업 홈페이지 만들기
+2주차: GitHub·Vercel·Netlify — 저장·배포·도메인 연결
+3주차: 게시판·블로그·CTA — 운영하고 문의받는 홈페이지
+4주차: 기술 최적화·검색 등록·측정 — 발견되고 확인되는 홈페이지
+5주차: 메타 광고 실전 — 홈페이지로 고객 데려오기
+6주차: 바이브코딩 업무 대시보드 — 들어온 고객 관리하기
 
 ## 과정 정보
-- 과정명: AI홈페이지스쿨 4주 완성 과정
-- 운영: 거상스쿨(주)
-- 기간: 주 1회 라이브 × 4주
-- 정가: 990,000원 / 8월 개강반 특별가: 550,000원 (부가세 별도)
-- 개강: 2026년 8월 25일 화요일 / 종강: 2026년 9월 15일 화요일
-- 수업: 매주 화요일 오후 8시~11시, 4회·총 12시간 / 소수정예 10~20명 모집
-- 문의: 임헌수 대표 010-3422-8075, 권현임 교육팀장 010-5795-8075
+- 과정명: AI홈페이지스쿨 6주 실전과정
+- 수업: 주 1회 3시간 × 6주, 총 18시간
+- 별도 준비: 개강 전 설치 OT 및 주차별 실습 과제
+- 일정: 개강 일정 추후 안내
+- 정가: 990,000원
+- 수강료: 600,000원
+- 별도 비용: 광고비, 도메인, 유료 AI 도구
+
+## 도구와 운영 원칙
+- ChatGPT: 기획·카피·목업·이미지 제작
+- Claude Code: 홈페이지와 고객 관리 대시보드 구현
+- Vercel: 본인 홈페이지 전체 배포 실습
+- Netlify: 공통 예제 비교 실습
+- 콘텐츠 관리·신청폼·대시보드: 검증된 공통 템플릿 제공
+- 고객 데이터: 공개 구글 시트 방식은 사용하지 않으며 실사용형은 인증과 접근 통제를 적용
+
+## 안내
+검색 색인·상위 노출·AI 추천, 광고 승인과 성과는 보장하지 않습니다. 광고비, 도메인, 유료 AI 도구 비용은 수강료와 별도입니다.

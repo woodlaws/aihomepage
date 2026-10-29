@@ -1,7 +1,6 @@
 # AI홈페이지스쿨 공식 홈페이지
 
-AI 시대, 1인기업과 소상공인이 자신의 공식 홈페이지를 직접 기획·제작·배포하고
-AIO 최적화 점검까지 경험하는 4주 실전 교육 브랜드의 공식 사이트입니다.
+ChatGPT와 Claude Code로 사업 홈페이지를 제작하고 배포·콘텐츠 운영·검색 등록·메타 광고·고객 관리까지 연결하는 6주 실전 교육 브랜드의 공식 사이트입니다.
 
 - 운영: 거상스쿨(주) / 거상마케팅센터
 - 배포: https://aihomepage-school.vercel.app
@@ -10,9 +9,9 @@ AIO 최적화 점검까지 경험하는 4주 실전 교육 브랜드의 공식 �
 
 | URL | 파일 | 내용 |
 | --- | --- | --- |
-| `/` | `index.html` | 홈 랜딩페이지 (Hero, 문제 제기, AIO, 도서 4권, 4주 커리큘럼, 강사 소개, 제작사례, 가격, FAQ) |
+| `/` | `index.html` | 홈 랜딩페이지 (Hero, 문제 제기, AIO, 6주 커리큘럼, 강사 소개, 제작사례, 가격, FAQ) |
 | `/about` | `about/index.html` | 스쿨 소개 — 브랜드 철학, 8가지 원칙, 8개 대상 고객, 대표 소개 |
-| `/curriculum` | `curriculum/index.html` | 4주 커리큘럼 상세 |
+| `/curriculum` | `curriculum/index.html` | 6주 커리큘럼 상세 |
 | `/aio` | `aio/index.html` | AIO 홈페이지 전략 |
 | `/schemaworks` | `schemaworks/index.html` | schemaWorks AIO 최적화 진단 |
 | `/examples` | `examples/index.html` | 제작사례 |
